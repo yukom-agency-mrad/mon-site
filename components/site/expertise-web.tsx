@@ -16,7 +16,7 @@ export function ExpertiseWeb() {
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl md:aspect-auto md:h-full">
                 <Image
                   src="/expertise-web-bg.jpg"
-                  alt="Tentes au pied d'une montagne enneigée au crépuscule"
+                  alt="Appareil photo argentique posé sur un rebord en bois"
                   fill
                   sizes="(min-width: 768px) 40vw, 100vw"
                   className="object-cover"
