@@ -64,7 +64,7 @@ export function Header() {
             size="lg"
             className="rounded-full bg-foreground px-5 text-background hover:bg-foreground/90"
           >
-            <Link href="/contact">Tracer la route</Link>
+            <Link href="/contact">Commencer l'aventure</Link>
           </Button>
         </div>
 
@@ -97,7 +97,7 @@ export function Header() {
               onClick={() => setMobileOpen(false)}
               className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-foreground px-5 text-background"
             >
-              Tracer la route
+              Commencer l'aventure
             </Link>
           </nav>
         </div>

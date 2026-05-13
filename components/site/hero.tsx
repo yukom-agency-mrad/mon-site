@@ -84,16 +84,27 @@ export function Hero() {
 
       {/* Vertical split overlay: light top, dark bottom.
           Spotlight cuts a transparent hole at the cursor position. */}
+      {/* Base overlay : light top, dark bottom. Carved by the spotlight mask. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 transition-[mask-image,-webkit-mask-image] duration-300"
+        className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(250,250,247,0.40) 0%, rgba(250,250,247,0.15) 28%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.50) 72%, rgba(0,0,0,0.80) 100%)",
+            "linear-gradient(to bottom, rgba(250,250,247,0.55) 0%, rgba(250,250,247,0.25) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.85) 100%)",
           maskImage:
-            "radial-gradient(circle 230px at var(--spot-x) var(--spot-y), transparent 0%, black 65%)",
+            "radial-gradient(circle 180px at var(--spot-x) var(--spot-y), transparent 0%, transparent 35%, black 75%)",
           WebkitMaskImage:
-            "radial-gradient(circle 230px at var(--spot-x) var(--spot-y), transparent 0%, black 65%)",
+            "radial-gradient(circle 180px at var(--spot-x) var(--spot-y), transparent 0%, transparent 35%, black 75%)",
+        }}
+      />
+
+      {/* Subtle warm highlight ring at the spotlight edge for a "torch" feel. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 mix-blend-screen"
+        style={{
+          background:
+            "radial-gradient(circle 180px at var(--spot-x) var(--spot-y), rgba(255,225,180,0.18) 0%, rgba(255,225,180,0.10) 30%, transparent 75%)",
         }}
       />
 
@@ -105,7 +116,7 @@ export function Hero() {
           className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-background/75 [text-shadow:0_1px_8px_rgba(0,0,0,0.35)]"
         >
           <Compass className="size-4 text-sunset" />
-          <span>Agence de communication · Metz · Moselle</span>
+          <span>Agence de marketing et communication · Metz · Moselle</span>
         </motion.div>
 
         <motion.div

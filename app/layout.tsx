@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     template: "%s · Yukom",
   },
   description:
-    "Agence de communication à Metz. Stratégie, graphisme, réseaux sociaux et sites web pour les entrepreneurs, collectivités et associations qui veulent une identité authentique.",
+    "Agence de marketing et communication à Metz. Stratégie, graphisme, réseaux sociaux et sites web pour les entrepreneurs, collectivités et associations qui veulent une identité authentique.",
   keywords: [
-    "agence de communication Metz",
-    "agence de communication Moselle",
+    "agence de marketing et communication Metz",
+    "agence de marketing et communication Moselle",
     "stratégie marketing",
     "identité visuelle",
     "réseaux sociaux",
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
     siteName: "Yukom",
     title: "Yukom — Inventeurs d'aventures",
     description:
-      "Agence de communication à Metz. L'agence de com' pour les aventures de votre entreprise.",
+      "Agence de marketing et communication à Metz. L'agence de com' pour les aventures de votre entreprise.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Yukom — Inventeurs d'aventures",
     description:
-      "Agence de communication à Metz. L'agence de com' pour les aventures de votre entreprise.",
+      "Agence de marketing et communication à Metz. L'agence de com' pour les aventures de votre entreprise.",
   },
 };
 
