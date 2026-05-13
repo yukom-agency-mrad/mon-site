@@ -19,9 +19,9 @@ const FALLBACK: PlaceData = {
   userRatingCount: 22,
   reviews: [
     {
-      authorName: "Les Maisons Cocoon",
+      authorName: "Eric Magnifico",
       rating: 5,
-      relativeTime: "Cliente",
+      relativeTime: "Les Maisons Cocoon",
       text: "Nous avons eu la chance de travailler avec Maud pour la création de notre site internet ainsi que toute notre charte graphique (cartes de visite, signature digitales, pages à en-tête, etc.), et le résultat est tout simplement I-N-C-R-O-Y-A-B-L-E ! Grâce à elle, nous disposons aujourd'hui d'une identité visuelle forte, professionnelle et moderne, dont nous sommes extrêmement fiers.",
       publishTime: new Date().toISOString(),
     },
