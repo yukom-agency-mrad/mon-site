@@ -55,7 +55,7 @@ export async function Reviews() {
               />
               <div className="flex flex-col">
                 <p className="text-xs font-medium uppercase tracking-wider text-foreground/55">
-                  Google Reviews
+                  Avis Google
                 </p>
                 <div className="mt-0.5 flex items-center gap-2">
                   <span className="text-xl font-semibold leading-none text-foreground">
