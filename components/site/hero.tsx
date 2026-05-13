@@ -73,13 +73,13 @@ export function Hero() {
         height={483}
         priority
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-[10%] w-[82%] max-w-3xl -translate-x-1/2 opacity-80 mix-blend-overlay sm:top-[8%] sm:w-[70%] md:max-w-4xl"
+        className="pointer-events-none absolute left-1/2 top-[42%] w-[88%] max-w-3xl -translate-x-1/2 opacity-85 mix-blend-overlay sm:top-[40%] sm:w-[78%] md:top-[38%] md:max-w-5xl"
         style={{
           zIndex: -15,
           maskImage:
-            "linear-gradient(to bottom, black 0%, black 58%, transparent 92%)",
+            "linear-gradient(to bottom, black 0%, black 22%, transparent 55%)",
           WebkitMaskImage:
-            "linear-gradient(to bottom, black 0%, black 58%, transparent 92%)",
+            "linear-gradient(to bottom, black 0%, black 22%, transparent 55%)",
         }}
       />
 
