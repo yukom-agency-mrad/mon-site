@@ -71,7 +71,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10 transition-[background] duration-300"
         style={{
           background:
-            "radial-gradient(circle 460px at var(--spot-x) var(--spot-y), rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.62) 65%)",
+            "radial-gradient(circle 230px at var(--spot-x) var(--spot-y), rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.62) 65%)",
         }}
       />
 
