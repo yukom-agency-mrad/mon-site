@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Award } from "lucide-react";
+import { Signature } from "./signature";
 
 export function About() {
   return (
@@ -12,7 +13,7 @@ export function About() {
             sortir des sentiers battus.
           </p>
 
-          {/* Center — portrait */}
+          {/* Center — portrait + signature */}
           <div className="order-first md:order-none">
             <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl">
               <Image
@@ -22,6 +23,7 @@ export function About() {
                 sizes="(min-width: 768px) 33vw, 100vw"
                 className="object-cover"
               />
+              <Signature className="absolute bottom-4 left-5 text-4xl text-foreground sm:bottom-5 sm:left-6 sm:text-5xl" />
             </div>
           </div>
 
