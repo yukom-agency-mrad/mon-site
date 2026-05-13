@@ -32,7 +32,7 @@ export async function Reviews() {
   const curated = reviews.slice(0, MAX_REVIEWS);
 
   return (
-    <section id="avis" className="bg-background pt-12 pb-24 sm:pt-16 sm:pb-32">
+    <section id="avis" className="bg-background py-12 sm:py-16">
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
