@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const WORDS = ["panache", "audace", "passion"] as const;
+const WORDS = ["créativité", "audace", "passion"] as const;
 const INTERVAL_MS = 1000;
 
 export function Pitch() {
