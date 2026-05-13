@@ -24,13 +24,26 @@ export function About() {
             </div>
           </div>
 
-          {/* Right — bio, alignée en bas */}
-          <p className="text-base leading-relaxed text-foreground/80 sm:text-lg md:self-end">
-            Derrière Yukom, se cache une passion pour l'aventure et le design.
-            Experte en marketing digital et certifiée coach Google Ateliers
-            Numériques, je construis avec vous une marque qui a du caractère
-            et un cap clair.
-          </p>
+          {/* Right — bio + tags, alignée en bas */}
+          <div className="md:self-end">
+            <p className="text-base leading-relaxed text-foreground/80 sm:text-lg">
+              Derrière Yukom, se cache une passion pour l'aventure et le
+              design. Experte en marketing digital et certifiée coach Google
+              Ateliers Numériques, je construis avec vous une marque qui a
+              du caractère et un cap clair.
+            </p>
+            <ul className="mt-6 flex flex-wrap gap-2">
+              <li className="inline-flex items-center rounded-full border border-foreground/15 px-3 py-1 text-xs text-foreground/75">
+                Google Coach Certifiée
+              </li>
+              <li className="inline-flex items-center rounded-full border border-foreground/15 px-3 py-1 text-xs text-foreground/75">
+                Basée à Metz et partout ailleurs
+              </li>
+              <li className="inline-flex items-center rounded-full border border-foreground/15 px-3 py-1 text-xs text-foreground/75">
+                Marketing &amp; communication digitale
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
