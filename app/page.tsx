@@ -1,4 +1,5 @@
 import { Hero } from "@/components/site/hero";
+import { Pitch } from "@/components/site/pitch";
 import { Services } from "@/components/site/services";
 import { About } from "@/components/site/about";
 import { Reviews } from "@/components/site/reviews";
@@ -8,6 +9,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <Pitch />
       <Services />
       <About />
       <Reviews />
