@@ -4,7 +4,7 @@ import { Award } from "lucide-react";
 export function About() {
   return (
     <section id="a-propos" className="bg-background">
-      <div className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-8 sm:py-32">
+      <div className="mx-auto w-full max-w-7xl px-6 pt-24 pb-12 sm:px-8 sm:pt-32 sm:pb-16">
         <div className="grid gap-10 md:grid-cols-3 md:gap-12 lg:gap-16">
           {/* Left — accroche, alignée en haut */}
           <p className="text-xl font-medium leading-[1.2] tracking-[-0.02em] text-foreground text-balance sm:text-2xl md:order-first md:mt-5 md:self-start md:text-[1.65rem]">
