@@ -19,7 +19,7 @@ export function Pitch() {
   return (
     <section className="bg-white">
       <div className="mx-auto w-full max-w-6xl px-6 py-12 sm:px-8 sm:py-16 md:py-20">
-        <p className="max-w-4xl text-[40px] font-medium leading-[1.1] tracking-[-0.035em] text-foreground text-balance">
+        <p className="max-w-4xl text-[40px] font-medium leading-[1.1] tracking-[-0.035em] text-foreground text-balance sm:text-[48px] md:text-[56px] lg:text-[64px]">
           Votre entreprise a une histoire à raconter.
           <em className="mt-2 block italic text-foreground sm:mt-3">
             Nous mettons notre{" "}
