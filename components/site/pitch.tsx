@@ -17,7 +17,7 @@ export function Pitch() {
   }, []);
 
   return (
-    <section className="bg-white">
+    <section className="bg-[#FCFAF5]">
       <div className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-8 sm:py-16 md:py-20">
         <p className="max-w-4xl text-[42px] font-medium leading-[1.1] tracking-[-0.035em] text-foreground text-balance">
           Votre entreprise a une histoire à raconter.
