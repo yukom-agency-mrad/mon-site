@@ -58,7 +58,7 @@
    * Tons inspirés de la photo hero (sommets enneigés + ciel turquoise-gris) */
   --forest-deep: oklch(0.22 0.045 155); /* sapin profond */
   --forest: oklch(0.34 0.06 150);       /* vert forêt */
-  --sunset: oklch(0.56 0.06 218);       /* turquoise / gris-bleu (ciel et ombres des pics) */
+  --sunset: oklch(0.66 0.13 200);       /* turquoise vibrant (clin d'œil au ciel) */
   --sand: oklch(0.96 0.012 80);         /* sable / off-white chaud (neige) */
 
   --background: oklch(0.985 0.006 85);  /* off-white légèrement chaud */
