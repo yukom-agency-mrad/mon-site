@@ -23,7 +23,7 @@ export function ExpertiseSocialMedia() {
                   alt="Surfer sur la plage de Cofete, Fuerteventura"
                   fill
                   sizes="(min-width: 768px) 40vw, 100vw"
-                  className="object-cover object-bottom"
+                  className="object-cover object-[50%_100%]"
                 />
               </div>
             </div>
@@ -59,7 +59,7 @@ export function ExpertiseSocialMedia() {
               </ul>
 
               <p className="mt-10 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg">
-                On ouvre notre sac à dos pour faire découvrir votre
+                On ouvre votre sac à dos pour faire découvrir votre
                 univers sur les différentes plateformes de réseaux sociaux.
               </p>
             </div>
