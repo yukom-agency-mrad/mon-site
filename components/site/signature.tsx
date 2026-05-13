@@ -38,7 +38,7 @@ export function Signature({ className }: SignatureProps) {
       viewport={{ once: true, amount: 0.3 }}
       variants={container}
       className={cn(
-        "inline-flex select-none leading-none [font-family:var(--font-caveat)]",
+        "inline-flex select-none whitespace-nowrap leading-none [font-family:var(--font-signature)]",
         className,
       )}
       aria-label={TEXT}

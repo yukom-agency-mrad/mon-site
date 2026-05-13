@@ -15,15 +15,18 @@ export function About() {
 
           {/* Center — portrait + signature */}
           <div className="order-first md:order-none">
-            <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl">
-              <Image
-                src="/maud-portrait.jpg"
-                alt="Maud Mrad, fondatrice de Yukom"
-                fill
-                sizes="(min-width: 768px) 33vw, 100vw"
-                className="object-cover"
-              />
-              <Signature className="absolute bottom-4 left-5 text-4xl text-foreground sm:bottom-5 sm:left-6 sm:text-5xl" />
+            <div className="relative mx-auto w-full max-w-sm">
+              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
+                <Image
+                  src="/maud-portrait.jpg"
+                  alt="Maud Mrad, fondatrice de Yukom"
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              {/* Signature décalée vers la gauche : seul le bout de "Mrad" dépasse sur la photo */}
+              <Signature className="absolute bottom-6 -left-12 text-5xl text-sunset sm:bottom-8 sm:-left-24 sm:text-6xl md:-left-32 md:text-7xl" />
             </div>
           </div>
 

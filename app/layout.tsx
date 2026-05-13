@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Caveat, Inter } from "next/font/google";
+import { Allura, Inter } from "next/font/google";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import "./globals.css";
@@ -10,9 +10,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const caveat = Caveat({
-  variable: "--font-caveat",
+const allura = Allura({
+  variable: "--font-signature",
   subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -59,7 +60,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${inter.variable} ${caveat.variable} h-full antialiased`}
+      className={`${inter.variable} ${allura.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Header />
