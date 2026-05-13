@@ -21,11 +21,11 @@ export function Hero() {
 
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-foreground/85 via-foreground/65 to-foreground/80"
+        className="pointer-events-none absolute inset-0 -z-10 bg-foreground/80"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-24 -right-24 -z-10 size-[28rem] rounded-full bg-sunset/25 blur-3xl sm:size-[36rem]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-foreground/60 via-foreground/30 to-transparent"
       />
 
       <div className="relative mx-auto w-full max-w-6xl px-6 sm:px-8">
@@ -86,10 +86,6 @@ export function Hero() {
             <Link href="#services">Découvrir les services</Link>
           </Button>
         </motion.div>
-
-        <p className="absolute bottom-4 right-6 hidden text-[10px] uppercase tracking-widest text-background/40 sm:block">
-          Photo&nbsp;: Ivan Bandura · Unsplash
-        </p>
       </div>
     </section>
   );
