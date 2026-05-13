@@ -15,7 +15,7 @@ export function ExpertiseStudioCreatif() {
       id="studio-creatif"
       className="sticky top-0 bg-[#FCFAF5]"
     >
-      <div className="mx-auto w-full max-w-7xl px-6 pt-8 pb-16 sm:px-8 sm:pt-12 sm:pb-24 md:pt-16 md:pb-28">
+      <div className="mx-auto w-full max-w-7xl px-6 pt-0 pb-16 sm:px-8 sm:pb-24 md:pb-28">
         <div className="rounded-2xl border border-sunset bg-[#FCFAF5] p-6 sm:p-10 md:p-12">
           <div className="grid gap-10 md:grid-cols-12 md:gap-14 md:items-stretch">
             {/* Image — left column, stretches to match content height */}
@@ -62,10 +62,9 @@ export function ExpertiseStudioCreatif() {
               </ul>
 
               <p className="mt-10 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg">
-                Prenez la route de la création graphique. Identité visuelle,
-                univers de marque, contenus&nbsp;: on donne à votre marque
-                une image inspirante, distinctive — celle qui se reconnaît
-                à des kilomètres.
+                Identité visuelle, univers de marque, créations print et
+                digitales&nbsp;: nous donnons à votre marque une image qui
+                se reconnaît à des kilomètres.
               </p>
             </div>
           </div>
