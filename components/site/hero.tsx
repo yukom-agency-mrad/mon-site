@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section className="relative isolate overflow-hidden min-h-[100svh] flex items-center pt-32 pb-24 sm:pt-40 sm:pb-32">
       <Image
-        src="/hero-ocean.jpg"
+        src="/hero-mountain.jpg"
         alt=""
         fill
         priority
