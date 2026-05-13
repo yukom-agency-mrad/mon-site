@@ -6,7 +6,7 @@ export function About() {
       id="a-propos"
       className="relative bg-foreground text-background"
     >
-      <div className="mx-auto w-full max-w-6xl px-6 py-24 sm:px-8 sm:py-32">
+      <div className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-8 sm:py-32">
         <div className="grid gap-16 md:grid-cols-12 md:gap-20">
           <div className="md:col-span-5">
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-background/55">

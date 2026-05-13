@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
-      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 sm:h-20 sm:px-8">
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 sm:h-20 sm:px-8">
         <Logo />
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -55,7 +55,7 @@ export function Header() {
 
       {mobileOpen && (
         <div className="border-t border-border/60 bg-background/95 backdrop-blur-md md:hidden">
-          <nav className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-6 py-4">
+          <nav className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-6 py-4">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}

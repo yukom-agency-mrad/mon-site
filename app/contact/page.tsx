@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <section className="bg-background pt-32 pb-24 sm:pt-40 sm:pb-32">
-      <div className="mx-auto w-full max-w-6xl px-6 sm:px-8">
+      <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="max-w-3xl">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-foreground/60">
             <span className="text-sunset">★</span> Démarrer une aventure

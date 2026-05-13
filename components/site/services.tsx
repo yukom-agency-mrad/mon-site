@@ -50,7 +50,7 @@ export function Services() {
       id="services"
       className="relative bg-background py-24 sm:py-32"
     >
-      <div className="mx-auto w-full max-w-6xl px-6 sm:px-8">
+      <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-foreground/60">

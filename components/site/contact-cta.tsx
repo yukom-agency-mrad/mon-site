@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export function ContactCta() {
   return (
     <section className="bg-background py-24 sm:py-32">
-      <div className="mx-auto w-full max-w-6xl px-6 sm:px-8">
+      <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="relative isolate overflow-hidden rounded-[2rem] bg-foreground p-10 text-background sm:p-16">
           <div
             aria-hidden
