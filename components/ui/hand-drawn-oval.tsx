@@ -10,19 +10,21 @@ type HandDrawnOvalProps = {
   className?: string;
 };
 
-// Four hand-drawn oval variations, each with its own quirks (start point,
-// overshoot, curvature). All designed in a 200×60 viewBox stretched
-// non-uniformly via preserveAspectRatio="none" to wrap any word width.
+// Four clearly distinct hand-drawn loops. Each viewBox is 200×60, stretched
+// non-uniformly via preserveAspectRatio="none". Stroke width is kept
+// pixel-perfect via vector-effect="non-scaling-stroke".
 const OVAL_PATHS = [
-  // Variant 0 — Standard with a slight gap at the start/end
-  "M 192 18 C 204 38, 184 56, 100 55 C 16 55, -2 38, 6 22 C 14 6, 56 2, 110 4 C 164 6, 192 10, 192 16",
-  // Variant 1 — Squashed wider, overshoot at the bottom
-  "M 198 22 C 204 44, 180 58, 100 57 C 18 56, -4 40, 4 24 C 10 8, 60 1, 112 3 C 162 5, 196 9, 200 20",
-  // Variant 2 — Slight upward tilt + sharper top curve
-  "M 188 12 C 208 30, 196 58, 100 54 C 10 56, -2 38, 8 20 C 18 6, 52 2, 110 4 C 168 6, 198 14, 194 26",
-  // Variant 3 — Rounder, more circular, smaller overshoot
-  "M 190 16 C 200 34, 188 54, 98 53 C 14 54, 0 34, 6 18 C 14 4, 54 2, 106 3 C 158 4, 192 10, 190 20",
+  // 0 — Standard smooth oval, gap top-right (the "loose end")
+  "M 192 14 C 218 36, 188 60, 100 58 C 12 60, -8 36, 6 18 C 18 -2, 60 -2, 112 0 C 162 2, 196 6, 198 14",
+  // 1 — Inverse start (top-left), tilted slightly downward
+  "M 8 18 C -10 38, 14 60, 100 58 C 188 60, 212 38, 196 18 C 184 2, 140 -2, 100 0 C 60 2, 18 4, 6 22",
+  // 2 — Rounded-rectangle vibe (sharper corners, flatter top/bottom)
+  "M 188 8 C 208 12, 204 30, 200 42 C 196 54, 172 60, 100 60 C 28 60, 0 50, 0 30 C 0 12, 22 4, 100 2 C 178 0, 192 4, 190 14",
+  // 3 — Wavy/irregular, bumpy edge for sketchier feel
+  "M 190 16 C 210 22, 196 44, 188 50 C 174 60, 130 60, 100 58 C 60 56, 20 60, 6 44 C -6 30, 8 12, 30 6 C 70 -4, 130 -2, 170 4 C 188 8, 194 8, 192 14",
 ];
+
+const STROKE_WIDTHS = ["2.5", "3", "2.2", "2.7"] as const;
 
 const draw = {
   hidden: { pathLength: 0, opacity: 0 },
@@ -31,7 +33,7 @@ const draw = {
     opacity: 1,
     transition: {
       pathLength: {
-        duration: 0.8,
+        duration: 0.85,
         ease: [0.43, 0.13, 0.23, 0.96] as [number, number, number, number],
       },
       opacity: { duration: 0.2 },
@@ -45,9 +47,16 @@ export function HandDrawnOval({
   variant = 0,
   className,
 }: HandDrawnOvalProps) {
-  const path = OVAL_PATHS[variant % OVAL_PATHS.length];
+  const v = variant % OVAL_PATHS.length;
+  const path = OVAL_PATHS[v];
+  const stroke = STROKE_WIDTHS[v];
   return (
-    <span className={cn("relative inline-block px-3 py-1", className)}>
+    <span
+      className={cn(
+        "relative inline-block px-6 py-3 sm:px-8 sm:py-4",
+        className,
+      )}
+    >
       <span className="relative z-10">{children}</span>
       <svg
         aria-hidden
@@ -58,10 +67,11 @@ export function HandDrawnOval({
         <motion.path
           d={path}
           fill="none"
-          strokeWidth="2.5"
+          strokeWidth={stroke}
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
+          vectorEffect="non-scaling-stroke"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.6 }}
