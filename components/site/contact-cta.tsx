@@ -1,33 +1,63 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, Mail, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function ContactCta() {
   return (
-    <section className="bg-[#FCFAF5]">
-      <div className="mx-auto w-full max-w-7xl px-6 py-28 sm:px-8 sm:py-36 md:py-44">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-display text-4xl font-medium leading-[1.05] tracking-[-0.035em] text-foreground text-balance sm:text-5xl md:text-6xl lg:text-7xl">
-            Et si on créait votre prochaine
-            <em className="italic text-sunset"> aventure</em> ensemble&nbsp;?
-          </h2>
+    <section className="bg-background py-24 sm:py-32">
+      <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
+        <div className="relative isolate overflow-hidden rounded-[2rem] bg-foreground p-10 text-background sm:p-16">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-32 -right-24 -z-10 size-[28rem] rounded-full bg-sunset/30 blur-3xl"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -bottom-40 -left-24 -z-10 size-[28rem] rounded-full bg-sunset/15 blur-3xl"
+          />
 
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-foreground/70 sm:text-xl">
-            Donnons vie à quelque chose qui marque.
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-background/60">
+            <span className="text-sunset">★</span> Prêt·e à embarquer ?
           </p>
 
-          <div className="mt-12 flex justify-center">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-foreground px-8 py-4 text-base font-medium text-background transition-all hover:bg-foreground/90 hover:gap-4"
+          <h2 className="mt-6 max-w-3xl font-display text-4xl leading-[1.05] tracking-tight text-background sm:text-5xl md:text-6xl">
+            On prend la <em className="italic text-sunset">carte</em>, vous
+            choisissez l'horizon.
+          </h2>
+
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-background/75 sm:text-lg">
+            Un projet à lancer, une marque à repositionner, un site à refaire&nbsp;?
+            Racontez-nous votre aventure&nbsp;: on revient vers vous sous 48&nbsp;h.
+          </p>
+
+          <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+            <Button
+              asChild
+              size="lg"
+              className="group h-12 rounded-full bg-sunset px-6 text-base text-background hover:bg-sunset/90"
             >
-              Démarrer la conversation
-              <span
-                aria-hidden
-                className="inline-flex size-8 items-center justify-center rounded-full bg-sunset text-background transition-transform group-hover:rotate-45"
+              <Link href="/contact">
+                Démarrer la conversation
+                <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-background/75">
+              <a
+                href="tel:+33783870295"
+                className="inline-flex items-center gap-2 hover:text-sunset"
               >
-                <ArrowUpRight className="size-4" />
-              </span>
-            </Link>
+                <Phone className="size-4" />
+                07 83 87 02 95
+              </a>
+              <a
+                href="mailto:maud_mrad@hotmail.fr"
+                className="inline-flex items-center gap-2 hover:text-sunset"
+              >
+                <Mail className="size-4" />
+                maud_mrad@hotmail.fr
+              </a>
+            </div>
           </div>
         </div>
       </div>
