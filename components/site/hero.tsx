@@ -76,23 +76,10 @@ export function Hero() {
         style={{
           zIndex: -15,
           maskImage:
-            "linear-gradient(to bottom, transparent 0%, black 18%, black 100%)",
+            "linear-gradient(to bottom, transparent 0%, black 22%, black 70%, transparent 100%)",
           WebkitMaskImage:
-            "linear-gradient(to bottom, transparent 0%, black 18%, black 100%)",
+            "linear-gradient(to bottom, transparent 0%, black 22%, black 70%, transparent 100%)",
         }}
-      />
-
-      {/* Foreground mountains cutout — sits ABOVE the logo so peaks
-          naturally hide whatever is behind (pixel-perfect "Photoshop" effect). */}
-      <Image
-        src="/hero-mountain-foreground.png"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-        style={{ zIndex: -13 }}
-        aria-hidden
       />
 
       {/* Vertical split overlay: light top, dark bottom.

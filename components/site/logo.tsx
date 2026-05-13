@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type LogoProps = {
@@ -12,14 +13,17 @@ export function Logo({ className, href = "/" }: LogoProps) {
       href={href}
       aria-label="Yukom — Accueil"
       className={cn(
-        "group inline-flex items-baseline gap-[0.15em] font-display text-2xl leading-none tracking-tight transition-opacity hover:opacity-80",
+        "inline-flex items-center transition-opacity hover:opacity-80",
         className,
       )}
     >
-      <span className="italic">Yukom</span>
-      <span
-        aria-hidden
-        className="size-[0.22em] translate-y-[-0.05em] rounded-full bg-sunset transition-transform group-hover:scale-150"
+      <Image
+        src="/yukom-logo-white.png"
+        alt="Yukom"
+        width={1759}
+        height={483}
+        priority
+        className="h-7 w-auto sm:h-8"
       />
     </Link>
   );
