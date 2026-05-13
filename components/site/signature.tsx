@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 type SignatureProps = {
@@ -9,50 +9,25 @@ type SignatureProps = {
 
 const TEXT = "Maud Mrad";
 
-const container: Variants = {
-  hidden: { opacity: 1 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.12,
-    },
-  },
-};
-
-const letter: Variants = {
-  hidden: { opacity: 0, y: 10, rotate: -8 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    rotate: 0,
-    transition: { duration: 0.35, ease: [0.2, 0.65, 0.3, 0.95] },
-  },
-};
-
 export function Signature({ className }: SignatureProps) {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
+    <motion.span
+      initial={{ clipPath: "inset(0 100% 0 0)" }}
+      whileInView={{ clipPath: "inset(0 -2% 0 0)" }}
       viewport={{ once: true, amount: 0.3 }}
-      variants={container}
+      transition={{
+        duration: 2.2,
+        ease: [0.4, 0.05, 0.2, 1],
+        delay: 0.25,
+      }}
+      style={{ clipPath: "inset(0 100% 0 0)" }}
       className={cn(
-        "inline-flex select-none whitespace-nowrap leading-none [font-family:var(--font-signature)]",
+        "inline-block select-none whitespace-nowrap leading-none [font-family:var(--font-signature)]",
         className,
       )}
       aria-label={TEXT}
     >
-      {TEXT.split("").map((char, i) => (
-        <motion.span
-          key={`${char}-${i}`}
-          variants={letter}
-          aria-hidden
-          className="inline-block"
-        >
-          {char === " " ? " " : char}
-        </motion.span>
-      ))}
-    </motion.div>
+      {TEXT}
+    </motion.span>
   );
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Mr_Dafoe } from "next/font/google";
+import { Inter, Nothing_You_Could_Do } from "next/font/google";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import "./globals.css";
@@ -10,7 +10,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const signatureFont = Mr_Dafoe({
+const signatureFont = Nothing_You_Could_Do({
   variable: "--font-signature",
   subsets: ["latin"],
   weight: "400",
