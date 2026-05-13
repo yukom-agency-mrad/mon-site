@@ -54,11 +54,12 @@
 }
 
 :root {
-  /* Brand palette — outdoor / Yukom */
+  /* Brand palette — outdoor / Yukom
+   * Tons inspirés de la photo hero (peaks enneigés + forêt automnale rouille) */
   --forest-deep: oklch(0.22 0.045 155); /* sapin profond */
   --forest: oklch(0.34 0.06 150);       /* vert forêt */
-  --sunset: oklch(0.68 0.18 38);        /* orange coucher de soleil */
-  --sand: oklch(0.96 0.012 80);         /* sable / off-white chaud */
+  --sunset: oklch(0.60 0.14 40);        /* rouille / terracotta (forêt automnale) */
+  --sand: oklch(0.96 0.012 80);         /* sable / off-white chaud (neige) */
 
   --background: oklch(0.985 0.006 85);  /* off-white légèrement chaud */
   --foreground: oklch(0.18 0.04 155);   /* vert très profond, presque noir */
