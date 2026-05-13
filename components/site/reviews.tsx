@@ -37,7 +37,7 @@ export async function Reviews() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <h2 className="font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-              Ils ont <span className="text-sunset">embarqué</span> avec Yukom
+              Ils ont <span className="text-sunset">embarqué</span> avec Yukom.
             </h2>
           </div>
 
