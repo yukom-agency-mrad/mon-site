@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const WORDS = ["créativité", "audace", "passion"] as const;
+const WORDS = ["panache", "audace", "passion"] as const;
 const INTERVAL_MS = 1000;
 
 export function Pitch() {
@@ -23,15 +23,12 @@ export function Pitch() {
           Votre entreprise a une histoire à raconter.
           <em className="mt-2 block italic text-foreground/85 sm:mt-3">
             Nous mettons notre{" "}
-            <span
+            <motion.span
+              layout
               aria-live="polite"
-              className="relative inline-block align-baseline"
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="inline-block align-baseline text-sunset"
             >
-              {/* invisible placeholder reserves the width of the longest word
-                  so the line doesn't reflow as we cycle */}
-              <span aria-hidden className="invisible whitespace-nowrap">
-                créativité
-              </span>
               <AnimatePresence mode="wait" initial={false}>
                 <motion.span
                   key={WORDS[index]}
@@ -39,12 +36,12 @@ export function Pitch() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.28, ease: "easeOut" }}
-                  className="absolute inset-0 whitespace-nowrap text-sunset"
+                  className="inline-block whitespace-nowrap"
                 >
                   {WORDS[index]}
                 </motion.span>
               </AnimatePresence>
-            </span>{" "}
+            </motion.span>{" "}
             sur sa route.
           </em>
         </p>
