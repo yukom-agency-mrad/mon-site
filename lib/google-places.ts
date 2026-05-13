@@ -74,6 +74,13 @@ const FALLBACK: PlaceData = {
       text: "Maud est une personne très à l'écoute et talentueuse. Son attention et sa maîtrise permettent de belles collaborations. En plus de son talent et de ses connaissances, ajoutons que sa sympathie est un véritable point positif supplémentaire pour travailler avec elle.",
       publishTime: new Date().toISOString(),
     },
+    {
+      authorName: "Juliette Lebreton",
+      rating: 5,
+      relativeTime: "Sudexpe",
+      text: "Super expérience avec Maud ! Très pro, réactive et de très beaux design !",
+      publishTime: new Date().toISOString(),
+    },
   ],
 };
 

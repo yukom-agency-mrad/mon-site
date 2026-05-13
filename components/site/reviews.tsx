@@ -24,7 +24,7 @@ function Stars({ value, className }: { value: number; className?: string }) {
   );
 }
 
-const MAX_REVIEWS = 8;
+const MAX_REVIEWS = 9;
 
 export async function Reviews() {
   const { reviews, rating, userRatingCount } = await getGoogleReviews();
