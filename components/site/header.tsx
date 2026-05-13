@@ -20,6 +20,9 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const isHome = pathname === "/";
+  // Hero is now light → header always uses dark text. We only toggle the
+  // background fill (transparent at top of home, solid once scrolled or on
+  // any sub-page).
   const transparent = isHome && !scrolled && !mobileOpen;
 
   useEffect(() => {
@@ -40,10 +43,7 @@ export function Header() {
     >
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 sm:h-20 sm:px-8">
         <Logo
-          className={cn(
-            "transition-colors",
-            transparent ? "text-background" : "text-foreground",
-          )}
+          className="text-foreground"
         />
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -51,12 +51,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={cn(
-                "text-sm transition-colors",
-                transparent
-                  ? "text-background/85 hover:text-background"
-                  : "text-foreground/70 hover:text-foreground",
-              )}
+              className="text-sm text-foreground/70 transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>
@@ -67,12 +62,7 @@ export function Header() {
           <Button
             asChild
             size="lg"
-            className={cn(
-              "rounded-full px-5 transition-colors",
-              transparent
-                ? "bg-background text-foreground hover:bg-background/90"
-                : "bg-foreground text-background hover:bg-foreground/90",
-            )}
+            className="rounded-full bg-foreground px-5 text-background hover:bg-foreground/90"
           >
             <Link href="/contact">Tracer la route</Link>
           </Button>
@@ -83,10 +73,7 @@ export function Header() {
           aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
-          className={cn(
-            "inline-flex size-10 items-center justify-center rounded-md transition-colors md:hidden",
-            transparent ? "text-background" : "text-foreground",
-          )}
+          className="inline-flex size-10 items-center justify-center rounded-md text-foreground md:hidden"
         >
           {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>

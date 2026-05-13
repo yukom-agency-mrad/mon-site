@@ -14,7 +14,6 @@ export function Hero() {
     const el = sectionRef.current;
     if (!el) return;
 
-    // Skip spotlight effect on coarse pointer devices (touch).
     const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
     if (!finePointer.matches) return;
 
@@ -67,13 +66,13 @@ export function Hero() {
       />
 
       <Image
-        src="/yukom-logo-white.png"
+        src="/yukom-logo-color.png"
         alt=""
-        width={1759}
-        height={483}
+        width={2035}
+        height={599}
         priority
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-[42%] w-[88%] max-w-3xl -translate-x-1/2 opacity-85 mix-blend-overlay sm:top-[40%] sm:w-[78%] md:top-[38%] md:max-w-5xl"
+        className="pointer-events-none absolute left-1/2 top-[42%] w-[88%] max-w-3xl -translate-x-1/2 opacity-95 mix-blend-multiply sm:top-[40%] sm:w-[78%] md:top-[38%] md:max-w-5xl"
         style={{
           zIndex: -15,
           maskImage:
@@ -88,7 +87,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10 transition-[background] duration-300"
         style={{
           background:
-            "radial-gradient(circle 230px at var(--spot-x) var(--spot-y), rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.62) 65%)",
+            "radial-gradient(circle 230px at var(--spot-x) var(--spot-y), rgba(255,255,255,0.15) 0%, rgba(250,250,247,0.78) 65%)",
         }}
       />
 
@@ -97,7 +96,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-background/80 [text-shadow:0_1px_8px_rgba(0,0,0,0.35)]"
+          className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-foreground/65"
         >
           <Compass className="size-4 text-sunset" />
           <span>Agence de communication · Metz · Moselle</span>
@@ -107,7 +106,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-          className="mt-8 max-w-4xl font-display text-5xl leading-[1.02] tracking-tight text-background text-balance sm:text-6xl md:text-7xl [text-shadow:0_2px_24px_rgba(0,0,0,0.4)]"
+          className="mt-8 max-w-4xl font-display text-5xl leading-[1.02] tracking-tight text-foreground text-balance sm:text-6xl md:text-7xl [text-shadow:0_1px_2px_rgba(255,255,255,0.6)]"
         >
           Inventeurs <em className="italic text-sunset">d'aventures</em> pour
           les marques qui n'ont pas froid aux idées.
@@ -117,7 +116,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.25 }}
-          className="mt-8 max-w-2xl text-lg leading-relaxed text-background/90 sm:text-xl [text-shadow:0_1px_12px_rgba(0,0,0,0.45)]"
+          className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80 sm:text-xl"
         >
           Yukom est l'agence de communication qui transforme vos projets
           d'entreprise en récits qui marquent. Stratégie, identité visuelle,
@@ -134,7 +133,7 @@ export function Hero() {
           <Button
             asChild
             size="lg"
-            className="group h-12 rounded-full bg-background px-6 text-base text-foreground hover:bg-background/90"
+            className="group h-12 rounded-full bg-foreground px-6 text-base text-background hover:bg-foreground/90"
           >
             <Link href="/contact">
               Démarrer votre aventure
@@ -145,7 +144,7 @@ export function Hero() {
             asChild
             variant="link"
             size="lg"
-            className="h-12 px-2 text-base text-background underline-offset-4 hover:text-sunset"
+            className="h-12 px-2 text-base text-foreground underline-offset-4 hover:text-sunset"
           >
             <Link href="#services">Découvrir les services</Link>
           </Button>
