@@ -72,14 +72,27 @@ export function Hero() {
         height={483}
         priority
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-[34%] w-[54%] max-w-xl -translate-x-1/2 opacity-60 mix-blend-overlay sm:top-[30%] sm:w-[44%] md:top-[26%] md:max-w-2xl"
+        className="pointer-events-none absolute left-1/2 top-[34%] w-[54%] max-w-xl -translate-x-1/2 opacity-65 mix-blend-overlay sm:top-[30%] sm:w-[44%] md:top-[26%] md:max-w-2xl"
         style={{
           zIndex: -15,
           maskImage:
-            "linear-gradient(to bottom, transparent 0%, black 22%, black 70%, transparent 100%)",
+            "linear-gradient(to bottom, transparent 0%, black 18%, black 100%)",
           WebkitMaskImage:
-            "linear-gradient(to bottom, transparent 0%, black 22%, black 70%, transparent 100%)",
+            "linear-gradient(to bottom, transparent 0%, black 18%, black 100%)",
         }}
+      />
+
+      {/* Foreground mountains cutout — sits ABOVE the logo so peaks
+          naturally hide whatever is behind (pixel-perfect "Photoshop" effect). */}
+      <Image
+        src="/hero-mountain-foreground.png"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+        style={{ zIndex: -13 }}
+        aria-hidden
       />
 
       {/* Vertical split overlay: light top, dark bottom.
