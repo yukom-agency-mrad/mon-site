@@ -10,7 +10,7 @@ const SUB_CATEGORIES = [
 
 export function ExpertiseStrategie() {
   return (
-    <section id="strategie" className="bg-white">
+    <section id="strategie" className="sticky top-0 bg-[#FCFAF5]">
       <div className="mx-auto w-full max-w-7xl px-6 pt-8 pb-16 sm:px-8 sm:pt-12 sm:pb-24 md:pt-16 md:pb-28">
         <div className="rounded-2xl border border-sunset bg-[#FCFAF5] p-6 sm:p-10 md:p-12">
           <div className="grid gap-10 md:grid-cols-12 md:gap-14 md:items-stretch">

@@ -1,6 +1,7 @@
 import { Hero } from "@/components/site/hero";
 import { Pitch } from "@/components/site/pitch";
 import { ExpertiseStrategie } from "@/components/site/expertise-strategie";
+import { ExpertiseStudioCreatif } from "@/components/site/expertise-studio-creatif";
 import { Services } from "@/components/site/services";
 import { About } from "@/components/site/about";
 import { Reviews } from "@/components/site/reviews";
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <Pitch />
       <ExpertiseStrategie />
+      <ExpertiseStudioCreatif />
       <Services />
       <About />
       <Reviews />
