@@ -59,8 +59,8 @@ export function ExpertiseSocialMedia() {
               </ul>
 
               <p className="mt-10 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg">
-                On ouvre votre sac à dos pour faire découvrir votre
-                univers sur les différentes plateformes de réseaux sociaux.
+                On ouvre votre sac à dos pour faire découvrir l'univers de
+                votre entreprise sur les différents réseaux sociaux.
               </p>
             </div>
           </div>
