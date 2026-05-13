@@ -26,7 +26,7 @@ export function About() {
                 />
               </div>
               {/* Signature décalée vers la gauche : seul le bout de "Mrad" dépasse sur la photo */}
-              <Signature className="absolute bottom-6 -left-12 text-5xl text-sunset sm:bottom-8 sm:-left-24 sm:text-6xl md:-left-32 md:text-7xl" />
+              <Signature className="absolute bottom-6 -left-8 text-3xl text-sunset sm:bottom-8 sm:-left-16 sm:text-4xl md:-left-24 md:text-5xl" />
             </div>
           </div>
 

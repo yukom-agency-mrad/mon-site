@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Allura, Inter } from "next/font/google";
+import { Inter, Mr_Dafoe } from "next/font/google";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import "./globals.css";
@@ -10,7 +10,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const allura = Allura({
+const signatureFont = Mr_Dafoe({
   variable: "--font-signature",
   subsets: ["latin"],
   weight: "400",
@@ -60,7 +60,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${inter.variable} ${allura.variable} h-full antialiased`}
+      className={`${inter.variable} ${signatureFont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Header />
