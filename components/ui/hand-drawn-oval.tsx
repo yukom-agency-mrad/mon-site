@@ -24,7 +24,7 @@ const OVAL_PATHS = [
   "M 190 16 C 210 22, 196 44, 188 50 C 174 60, 130 60, 100 58 C 60 56, 20 60, 6 44 C -6 30, 8 12, 30 6 C 70 -4, 130 -2, 170 4 C 188 8, 194 8, 192 14",
 ];
 
-const STROKE_WIDTHS = ["2.5", "3", "2.2", "2.7"] as const;
+const STROKE_WIDTHS = ["1.4", "1.6", "1.2", "1.5"] as const;
 
 const draw = {
   hidden: { pathLength: 0, opacity: 0 },
@@ -53,7 +53,7 @@ export function HandDrawnOval({
   return (
     <span
       className={cn(
-        "relative inline-block px-6 py-3 sm:px-8 sm:py-4",
+        "relative inline-block px-4 py-1.5 sm:px-5 sm:py-2",
         className,
       )}
     >
