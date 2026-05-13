@@ -54,7 +54,7 @@ export function Hero() {
     <section
       ref={sectionRef}
       style={{ "--spot-x": "50%", "--spot-y": "50%" } as CSSProperties}
-      className="group/hero relative isolate overflow-hidden min-h-[100svh] flex items-center pt-32 pb-24 sm:pt-40 sm:pb-32"
+      className="group/hero relative isolate overflow-hidden min-h-[100svh] flex items-end pt-32 pb-20 sm:pt-40 sm:pb-28"
     >
       <Image
         src="/hero-mountain.jpg"
@@ -73,8 +73,14 @@ export function Hero() {
         height={483}
         priority
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-[16%] w-[60%] max-w-md -translate-x-1/2 opacity-70 mix-blend-overlay sm:w-[44%] sm:max-w-xl md:top-[14%] md:max-w-2xl"
-        style={{ zIndex: -15 }}
+        className="pointer-events-none absolute left-1/2 top-[10%] w-[82%] max-w-3xl -translate-x-1/2 opacity-80 mix-blend-overlay sm:top-[8%] sm:w-[70%] md:max-w-4xl"
+        style={{
+          zIndex: -15,
+          maskImage:
+            "linear-gradient(to bottom, black 0%, black 58%, transparent 92%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, black 0%, black 58%, transparent 92%)",
+        }}
       />
 
       <div
