@@ -66,6 +66,17 @@ export function Hero() {
         aria-hidden
       />
 
+      <Image
+        src="/yukom-logo-white.png"
+        alt=""
+        width={1759}
+        height={483}
+        priority
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-[16%] w-[60%] max-w-md -translate-x-1/2 opacity-70 mix-blend-overlay sm:w-[44%] sm:max-w-xl md:top-[14%] md:max-w-2xl"
+        style={{ zIndex: -15 }}
+      />
+
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 transition-[background] duration-300"
