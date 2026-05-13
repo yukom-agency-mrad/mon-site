@@ -15,7 +15,7 @@ export function ExpertiseSocialMedia() {
       id="social-media"
       className="sticky top-[10rem] bg-[#FCFAF5]"
     >
-      <div className="mx-auto w-full max-w-7xl px-6 py-0 sm:px-8">
+      <div className="mx-auto w-full max-w-7xl px-6 pt-0 pb-3 sm:px-8">
         <div className="rounded-2xl border border-sunset bg-[#FCFAF5] p-6 sm:p-10 md:p-12">
           <div className="grid gap-10 md:grid-cols-12 md:gap-14 md:items-stretch">
             {/* Image — left column */}
