@@ -60,6 +60,20 @@ const FALLBACK: PlaceData = {
       text: "J'ai fait appel à Maud pour refaire tout mon site internet et mettre un coup de boost à ma communication, elle me conseille sur de nombreux points et sait être à l'écoute de mes besoins. Grâce à elle j'ai gagné en visibilité — c'est exactement ce que je souhaitais !",
       publishTime: new Date().toISOString(),
     },
+    {
+      authorName: "Nicolas Haubtmann",
+      rating: 5,
+      relativeTime: "Chez Biclou",
+      text: "Une super formatrice pour une super formation ! Et avec le sourire en plus 😄 ! Je recommande vivement.",
+      publishTime: new Date().toISOString(),
+    },
+    {
+      authorName: "Clothilde Aujard",
+      rating: 5,
+      relativeTime: "Les Colocs",
+      text: "Maud est une personne très à l'écoute et talentueuse. Son attention et sa maîtrise permettent de belles collaborations. En plus de son talent et de ses connaissances, ajoutons que sa sympathie est un véritable point positif supplémentaire pour travailler avec elle.",
+      publishTime: new Date().toISOString(),
+    },
   ],
 };
 
