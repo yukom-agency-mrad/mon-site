@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Award } from "lucide-react";
 
 export function About() {
   return (
@@ -33,13 +34,14 @@ export function About() {
               du caractère et un cap clair.
             </p>
             <ul className="mt-6 flex flex-wrap gap-2">
-              <li className="inline-flex items-center rounded-full border border-foreground/15 px-3 py-1 text-xs text-foreground/75">
+              <li className="inline-flex items-center gap-1.5 rounded-full border border-sunset/40 bg-sunset/5 px-3 py-1 text-xs font-medium text-sunset">
+                <Award className="size-3.5" />
                 Google Coach Certifiée
               </li>
-              <li className="inline-flex items-center rounded-full border border-foreground/15 px-3 py-1 text-xs text-foreground/75">
+              <li className="inline-flex items-center rounded-full border border-sunset/40 bg-sunset/5 px-3 py-1 text-xs font-medium text-sunset">
                 Basée à Metz et partout ailleurs
               </li>
-              <li className="inline-flex items-center rounded-full border border-foreground/15 px-3 py-1 text-xs text-foreground/75">
+              <li className="inline-flex items-center rounded-full border border-sunset/40 bg-sunset/5 px-3 py-1 text-xs font-medium text-sunset">
                 Marketing &amp; communication digitale
               </li>
             </ul>
