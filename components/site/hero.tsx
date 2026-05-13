@@ -21,11 +21,11 @@ export function Hero() {
 
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-foreground/80"
+        className="pointer-events-none absolute inset-0 -z-10 bg-black/55"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-foreground/60 via-foreground/30 to-transparent"
+        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-black/60 via-black/25 to-transparent"
       />
 
       <div className="relative mx-auto w-full max-w-6xl px-6 sm:px-8">
