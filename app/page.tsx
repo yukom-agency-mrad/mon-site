@@ -14,10 +14,12 @@ export default function HomePage() {
     <>
       <Hero />
       <Pitch />
-      <ExpertiseStrategie />
-      <ExpertiseStudioCreatif />
-      <ExpertiseSocialMedia />
-      <ExpertiseWeb />
+      <div className="relative">
+        <ExpertiseStrategie />
+        <ExpertiseStudioCreatif />
+        <ExpertiseSocialMedia />
+        <ExpertiseWeb />
+      </div>
       <Services />
       <About />
       <Reviews />

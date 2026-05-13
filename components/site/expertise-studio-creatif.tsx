@@ -13,9 +13,9 @@ export function ExpertiseStudioCreatif() {
   return (
     <section
       id="studio-creatif"
-      className="sticky top-0 bg-[#FCFAF5]"
+      className="sticky top-[5rem] bg-[#FCFAF5]"
     >
-      <div className="mx-auto w-full max-w-7xl px-6 pt-0 pb-16 sm:px-8 sm:pb-24 md:pb-28">
+      <div className="mx-auto w-full max-w-7xl px-6 py-0 sm:px-8">
         <div className="rounded-2xl border border-sunset bg-[#FCFAF5] p-6 sm:p-10 md:p-12">
           <div className="grid gap-10 md:grid-cols-12 md:gap-14 md:items-stretch">
             {/* Image — left column, stretches to match content height */}
