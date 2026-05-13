@@ -14,16 +14,18 @@ export function About() {
 
           {/* Center — portrait + label */}
           <div className="order-first md:order-none">
-            <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl">
-              <Image
-                src="/maud-portrait.jpg"
-                alt="Maud Mrad, fondatrice de Yukom"
-                fill
-                sizes="(min-width: 768px) 33vw, 100vw"
-                className="object-cover"
-              />
-              <p className="absolute bottom-4 left-4 text-[10px] font-medium uppercase tracking-[0.18em] text-foreground sm:bottom-5 sm:left-5 sm:text-xs">
-                Maud Mrad — Fondatrice Yukom
+            <div className="mx-auto w-full max-w-sm">
+              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
+                <Image
+                  src="/maud-portrait.jpg"
+                  alt="Maud Mrad, fondatrice de Yukom"
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <p className="mt-3 text-[10px] font-medium uppercase tracking-[0.18em] text-foreground/80 sm:mt-4 sm:text-xs">
+                Maud Mrad · Fondatrice Yukom
               </p>
             </div>
           </div>
