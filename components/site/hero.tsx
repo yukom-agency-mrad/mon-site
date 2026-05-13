@@ -72,13 +72,13 @@ export function Hero() {
         height={483}
         priority
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-[26%] w-[54%] max-w-xl -translate-x-1/2 opacity-80 mix-blend-overlay sm:top-[24%] sm:w-[44%] md:top-[22%] md:max-w-2xl"
+        className="pointer-events-none absolute left-1/2 top-[34%] w-[54%] max-w-xl -translate-x-1/2 opacity-60 mix-blend-overlay sm:top-[30%] sm:w-[44%] md:top-[26%] md:max-w-2xl"
         style={{
           zIndex: -15,
           maskImage:
-            "linear-gradient(to bottom, transparent 0%, black 25%, black 100%)",
+            "linear-gradient(to bottom, transparent 0%, black 22%, black 70%, transparent 100%)",
           WebkitMaskImage:
-            "linear-gradient(to bottom, transparent 0%, black 25%, black 100%)",
+            "linear-gradient(to bottom, transparent 0%, black 22%, black 70%, transparent 100%)",
         }}
       />
 
@@ -108,32 +108,10 @@ export function Hero() {
           <span>Agence de communication · Metz · Moselle</span>
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-          className="mt-8 max-w-4xl font-display text-5xl leading-[1.02] tracking-tight text-background text-balance sm:text-6xl md:text-7xl [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]"
-        >
-          Inventeurs <em className="italic text-sunset">d'aventures</em> pour
-          les marques qui n'ont pas froid aux idées.
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.25 }}
-          className="mt-8 max-w-2xl text-lg leading-relaxed text-background/90 sm:text-xl [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]"
-        >
-          Yukom est l'agence de communication qui transforme vos projets
-          d'entreprise en récits qui marquent. Stratégie, identité visuelle,
-          réseaux sociaux et sites web&nbsp;: on prépare le sac, on trace la
-          route, vous racontez votre histoire.
-        </motion.p>
-
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
           className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
         >
           <Button
