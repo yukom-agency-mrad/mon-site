@@ -66,19 +66,19 @@ export function Hero() {
       />
 
       <Image
-        src="/yukom-logo-color.png"
+        src="/yukom-logo-white.png"
         alt=""
-        width={2035}
-        height={599}
+        width={1759}
+        height={483}
         priority
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-[42%] w-[88%] max-w-3xl -translate-x-1/2 opacity-95 mix-blend-multiply sm:top-[40%] sm:w-[78%] md:top-[38%] md:max-w-5xl"
+        className="pointer-events-none absolute left-1/2 top-[12%] w-[72%] max-w-2xl -translate-x-1/2 opacity-70 mix-blend-overlay sm:top-[10%] sm:w-[58%] md:max-w-3xl"
         style={{
           zIndex: -15,
           maskImage:
-            "linear-gradient(to bottom, black 0%, black 22%, transparent 55%)",
+            "linear-gradient(to bottom, transparent 0%, black 28%, black 60%, transparent 100%)",
           WebkitMaskImage:
-            "linear-gradient(to bottom, black 0%, black 22%, transparent 55%)",
+            "linear-gradient(to bottom, transparent 0%, black 28%, black 60%, transparent 100%)",
         }}
       />
 
@@ -87,7 +87,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10 transition-[background] duration-300"
         style={{
           background:
-            "radial-gradient(circle 230px at var(--spot-x) var(--spot-y), rgba(255,255,255,0.15) 0%, rgba(250,250,247,0.78) 65%)",
+            "radial-gradient(circle 230px at var(--spot-x) var(--spot-y), rgba(255,255,255,0.08) 0%, rgba(250,250,247,0.39) 65%)",
         }}
       />
 
