@@ -3,6 +3,10 @@ import Image from "next/image";
 const SUB_CATEGORIES = [
   "Création de sites web UI/UX",
   "Stratégie SEO",
+  "Refonte de site",
+  "Référencement local",
+  "Optimisation des performances",
+  "Campagnes email marketing",
 ];
 
 export function ExpertiseWeb() {

@@ -4,6 +4,9 @@ const SUB_CATEGORIES = [
   "Stratégie éditoriale",
   "Social Media Management",
   "E-réputation",
+  "Formation Création de Contenus Intelligence Artificielle",
+  "Audit de présence digitale",
+  "Veille concurrentielle",
 ];
 
 export function ExpertiseSocialMedia() {
