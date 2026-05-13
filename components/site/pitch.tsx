@@ -21,7 +21,7 @@ export function Pitch() {
       <div className="mx-auto w-full max-w-6xl px-6 py-12 sm:px-8 sm:py-16 md:py-20">
         <p className="max-w-4xl text-3xl font-medium leading-[1.08] tracking-[-0.035em] text-foreground text-balance sm:text-4xl md:text-5xl lg:text-[3.5rem]">
           Votre entreprise a une histoire à raconter.
-          <em className="mt-2 block italic text-foreground/85 sm:mt-3">
+          <em className="mt-2 block italic text-foreground sm:mt-3">
             Nous mettons notre{" "}
             <motion.span
               layout
