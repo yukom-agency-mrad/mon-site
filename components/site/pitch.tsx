@@ -2,9 +2,17 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { HandDrawnOval } from "@/components/ui/hand-drawn-oval";
 
 const WORDS = ["créativité", "audace", "passion"] as const;
 const INTERVAL_MS = 1000;
+
+const EXPERTISES = [
+  "Stratégie",
+  "Studio Créatif",
+  "Social Media",
+  "Web",
+] as const;
 
 export function Pitch() {
   const [index, setIndex] = useState(0);
@@ -19,7 +27,7 @@ export function Pitch() {
   return (
     <section className="bg-white">
       <div className="mx-auto w-full max-w-6xl px-6 py-12 sm:px-8 sm:py-16 md:py-20">
-        <p className="max-w-4xl text-[40px] font-medium leading-[1.1] tracking-[-0.035em] text-foreground text-balance sm:text-[48px] md:text-[56px] lg:text-[64px]">
+        <p className="max-w-4xl text-[42px] font-medium leading-[1.1] tracking-[-0.035em] text-foreground text-balance">
           Votre entreprise a une histoire à raconter.
           <em className="mt-2 block italic text-foreground sm:mt-3">
             Nous mettons notre{" "}
@@ -45,6 +53,14 @@ export function Pitch() {
             sur sa route.
           </em>
         </p>
+
+        <div className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-5 text-lg font-medium text-foreground sm:mt-16 sm:gap-x-10 sm:text-xl md:text-2xl">
+          {EXPERTISES.map((label, i) => (
+            <HandDrawnOval key={label} delay={0.2 + i * 0.25}>
+              {label}
+            </HandDrawnOval>
+          ))}
+        </div>
       </div>
     </section>
   );
