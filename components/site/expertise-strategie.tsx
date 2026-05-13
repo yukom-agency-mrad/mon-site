@@ -12,7 +12,8 @@ export function ExpertiseStrategie() {
   return (
     <section id="strategie" className="bg-white">
       <div className="mx-auto w-full max-w-6xl px-6 py-20 sm:px-8 sm:py-28 md:py-32">
-        <div className="grid gap-10 md:grid-cols-12 md:gap-14 md:items-stretch">
+        <div className="rounded-2xl border border-sunset p-6 sm:p-10 md:p-12">
+          <div className="grid gap-10 md:grid-cols-12 md:gap-14 md:items-stretch">
           {/* Image — left column, stretches to match content height */}
           <div className="md:col-span-5">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl md:aspect-auto md:h-full">
@@ -61,6 +62,7 @@ export function ExpertiseStrategie() {
               comprendre votre marque, vos publics, vos enjeux&nbsp;: puis
               on dessine le cap.
             </p>
+          </div>
           </div>
         </div>
       </div>
