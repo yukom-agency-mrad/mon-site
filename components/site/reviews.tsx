@@ -1,16 +1,22 @@
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 import { getGoogleReviews } from "@/lib/google-places";
+import { ReviewsCarousel } from "./reviews-carousel";
 import { cn } from "@/lib/utils";
 
 function Stars({ value, className }: { value: number; className?: string }) {
   return (
-    <div className={cn("inline-flex items-center gap-0.5", className)} aria-label={`Note ${value} sur 5`}>
+    <div
+      className={cn("inline-flex items-center gap-0.5", className)}
+      aria-label={`Note ${value} sur 5`}
+    >
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
           className={cn(
             "size-4",
-            i < Math.round(value) ? "fill-sunset text-sunset" : "text-foreground/20",
+            i < Math.round(value)
+              ? "fill-sunset text-sunset"
+              : "text-foreground/20",
           )}
         />
       ))}
@@ -18,9 +24,11 @@ function Stars({ value, className }: { value: number; className?: string }) {
   );
 }
 
+const MAX_REVIEWS = 8;
+
 export async function Reviews() {
   const { reviews, rating, userRatingCount } = await getGoogleReviews();
-  const visible = reviews.slice(0, 6);
+  const curated = reviews.slice(0, MAX_REVIEWS);
 
   return (
     <section id="avis" className="bg-background py-24 sm:py-32">
@@ -50,36 +58,7 @@ export async function Reviews() {
           ) : null}
         </div>
 
-        <ul className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {visible.map((review, i) => (
-            <li
-              key={`${review.authorName}-${i}`}
-              className="group relative flex flex-col gap-5 rounded-2xl border border-border bg-card p-7 transition-colors duration-300 hover:border-sunset/40"
-            >
-              <Quote className="size-6 text-sunset/70" />
-
-              <p className="text-base leading-relaxed text-foreground/85 text-pretty">
-                {review.text.length > 280
-                  ? `${review.text.slice(0, 277).trimEnd()}…`
-                  : review.text}
-              </p>
-
-              <div className="mt-auto flex items-center justify-between border-t border-border/70 pt-5">
-                <div>
-                  <p className="text-sm font-medium text-foreground">
-                    {review.authorName}
-                  </p>
-                  {review.relativeTime ? (
-                    <p className="mt-0.5 text-xs text-foreground/55">
-                      {review.relativeTime}
-                    </p>
-                  ) : null}
-                </div>
-                <Stars value={review.rating} />
-              </div>
-            </li>
-          ))}
-        </ul>
+        <ReviewsCarousel reviews={curated} />
 
         <p className="mt-10 text-sm text-foreground/55">
           Avis publiés sur notre fiche d'établissement Google.

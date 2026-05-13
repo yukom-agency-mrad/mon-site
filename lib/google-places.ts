@@ -16,12 +16,47 @@ export type PlaceData = {
 
 const FALLBACK: PlaceData = {
   rating: 5,
-  userRatingCount: 1,
+  userRatingCount: 22,
   reviews: [
+    {
+      authorName: "Les Maisons Cocoon",
+      rating: 5,
+      relativeTime: "Cliente",
+      text: "Nous avons eu la chance de travailler avec Maud pour la création de notre site internet ainsi que toute notre charte graphique (cartes de visite, signature digitales, pages à en-tête, etc.), et le résultat est tout simplement I-N-C-R-O-Y-A-B-L-E ! Grâce à elle, nous disposons aujourd'hui d'une identité visuelle forte, professionnelle et moderne, dont nous sommes extrêmement fiers.",
+      publishTime: new Date().toISOString(),
+    },
+    {
+      authorName: "Filipa Texeira",
+      rating: 5,
+      relativeTime: "Sorec Immobilier",
+      text: "Nous avons fait appel à Maud pour la création complète de notre flyer, et nous sommes ravis du résultat ! Elle a été à l'écoute, très réactive, professionnelle et pleine de bons conseils. En plus, elle est vraiment sympathique ! Un grand merci pour ton excellent travail, Maud !",
+      publishTime: new Date().toISOString(),
+    },
+    {
+      authorName: "Lucie Di Giovanni",
+      rating: 5,
+      relativeTime: "Aimiya",
+      text: "Une agence de communication qui se démarque. Merci infiniment d'avoir remis de l'ordre, merci pour la créativité, merci pour la persévérance dans les obstacles à dépasser ! Je crois en mon développement sur mes réseaux grâce à Maud, une femme incroyable !!! Merci de mettre en lumière l'authenticité de mon âme ✨",
+      publishTime: new Date().toISOString(),
+    },
+    {
+      authorName: "Clément Thonon",
+      rating: 5,
+      relativeTime: "Client",
+      text: "J'ai fait appel à Maud pour l'élaboration d'une charte graphique. Elle a su saisir mes besoins et proposer un branding cohérent avec ce que je souhaitais. Accompagnement au top 👌🏻",
+      publishTime: new Date().toISOString(),
+    },
+    {
+      authorName: "Céline Vachon",
+      rating: 5,
+      relativeTime: "Cap Expé Occitanie",
+      text: "Maud a très vite compris l'esprit de nos demandes de visuels et a su rebondir et s'adapter à nos changements d'avis ;) Très réactive, le résultat très pro correspond parfaitement à nos attentes ! Merci et à très vite :)",
+      publishTime: new Date().toISOString(),
+    },
     {
       authorName: "Émilie Wild",
       rating: 5,
-      relativeTime: "Cliente Aniodys",
+      relativeTime: "Aniodys",
       text: "J'ai fait appel à Maud pour refaire tout mon site internet et mettre un coup de boost à ma communication, elle me conseille sur de nombreux points et sait être à l'écoute de mes besoins. Grâce à elle j'ai gagné en visibilité — c'est exactement ce que je souhaitais !",
       publishTime: new Date().toISOString(),
     },
