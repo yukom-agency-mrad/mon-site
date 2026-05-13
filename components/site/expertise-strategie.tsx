@@ -12,7 +12,7 @@ export function ExpertiseStrategie() {
   return (
     <section id="strategie" className="bg-white">
       <div className="mx-auto w-full max-w-6xl px-6 py-20 sm:px-8 sm:py-28 md:py-32">
-        <div className="rounded-2xl border border-sunset p-6 sm:p-10 md:p-12">
+        <div className="rounded-2xl border border-sunset bg-[oklch(0.955_0.022_85)] p-6 sm:p-10 md:p-12">
           <div className="grid gap-10 md:grid-cols-12 md:gap-14 md:items-stretch">
           {/* Image — left column, stretches to match content height */}
           <div className="md:col-span-5">
