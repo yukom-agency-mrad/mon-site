@@ -20,7 +20,7 @@ export function ExpertiseSocialMedia() {
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl md:aspect-auto md:h-full">
                 <Image
                   src="/expertise-social-media-bg.jpg"
-                  alt="Vallée de montagne au crépuscule"
+                  alt="Surfer sur la plage de Cofete, Fuerteventura"
                   fill
                   sizes="(min-width: 768px) 40vw, 100vw"
                   className="object-cover"
@@ -59,10 +59,8 @@ export function ExpertiseSocialMedia() {
               </ul>
 
               <p className="mt-10 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg">
-                Ouvrez votre sac à dos pour faire découvrir votre univers
-                sur les différentes plateformes. Stratégie éditoriale,
-                animation des comptes, gestion de votre réputation&nbsp;:
-                on raconte votre marque là où votre public vous attend.
+                On ouvre notre sac à dos pour faire découvrir votre
+                univers sur les différentes plateformes de réseaux sociaux.
               </p>
             </div>
           </div>
