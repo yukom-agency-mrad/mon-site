@@ -12,13 +12,13 @@ export function ExpertiseStrategie() {
   return (
     <section id="strategie" className="bg-white">
       <div className="mx-auto w-full max-w-6xl px-6 py-20 sm:px-8 sm:py-28 md:py-32">
-        <div className="grid gap-12 md:grid-cols-12 md:items-center md:gap-16">
-          {/* Image — mountain photo, left column */}
+        <div className="grid gap-10 md:grid-cols-12 md:gap-14 md:items-stretch">
+          {/* Image — left column, stretches to match content height */}
           <div className="md:col-span-5">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl md:aspect-auto md:h-full">
               <Image
-                src="/hero-mountain.jpg"
-                alt="Sommets alpins au coucher du soleil"
+                src="/expertise-strategie-bg.jpg"
+                alt="Sommet alpin au coucher du soleil"
                 fill
                 sizes="(min-width: 768px) 40vw, 100vw"
                 className="object-cover"
@@ -26,28 +26,26 @@ export function ExpertiseStrategie() {
             </div>
           </div>
 
-          {/* Content — right column, right-aligned */}
-          <div className="md:col-span-7 md:text-right">
-            <div className="flex md:justify-end">
-              <div
-                aria-hidden
-                className="h-16 w-16 bg-sunset sm:h-20 sm:w-20"
-                style={{
-                  maskImage: "url(/expertise-strategie.png)",
-                  WebkitMaskImage: "url(/expertise-strategie.png)",
-                  maskRepeat: "no-repeat",
-                  WebkitMaskRepeat: "no-repeat",
-                  maskSize: "contain",
-                  WebkitMaskSize: "contain",
-                }}
-              />
-            </div>
+          {/* Content — right column, left-aligned */}
+          <div className="md:col-span-7">
+            <div
+              aria-hidden
+              className="h-16 w-16 bg-sunset sm:h-20 sm:w-20"
+              style={{
+                maskImage: "url(/expertise-strategie.png)",
+                WebkitMaskImage: "url(/expertise-strategie.png)",
+                maskRepeat: "no-repeat",
+                WebkitMaskRepeat: "no-repeat",
+                maskSize: "contain",
+                WebkitMaskSize: "contain",
+              }}
+            />
 
             <h2 className="mt-6 font-display text-5xl font-medium leading-[1.02] tracking-[-0.035em] text-foreground sm:text-6xl md:text-7xl">
               Stratégie
             </h2>
 
-            <ul className="mt-8 flex flex-wrap gap-2.5 md:justify-end sm:gap-3">
+            <ul className="mt-8 flex flex-wrap gap-2.5 sm:gap-3">
               {SUB_CATEGORIES.map((label) => (
                 <li
                   key={label}
@@ -58,7 +56,7 @@ export function ExpertiseStrategie() {
               ))}
             </ul>
 
-            <p className="mt-10 max-w-2xl text-base leading-relaxed text-foreground/75 md:ml-auto sm:text-lg">
+            <p className="mt-10 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg">
               Avant de tracer la route, il faut une carte. On commence par
               comprendre votre marque, vos publics, vos enjeux&nbsp;: puis
               on dessine le cap.
