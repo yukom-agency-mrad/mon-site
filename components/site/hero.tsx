@@ -72,22 +72,28 @@ export function Hero() {
         height={483}
         priority
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-[12%] w-[72%] max-w-2xl -translate-x-1/2 opacity-70 mix-blend-overlay sm:top-[10%] sm:w-[58%] md:max-w-3xl"
+        className="pointer-events-none absolute left-1/2 top-[26%] w-[54%] max-w-xl -translate-x-1/2 opacity-80 mix-blend-overlay sm:top-[24%] sm:w-[44%] md:top-[22%] md:max-w-2xl"
         style={{
           zIndex: -15,
           maskImage:
-            "linear-gradient(to bottom, transparent 0%, black 28%, black 60%, transparent 100%)",
+            "linear-gradient(to bottom, transparent 0%, black 25%, black 100%)",
           WebkitMaskImage:
-            "linear-gradient(to bottom, transparent 0%, black 28%, black 60%, transparent 100%)",
+            "linear-gradient(to bottom, transparent 0%, black 25%, black 100%)",
         }}
       />
 
+      {/* Vertical split overlay: light top, dark bottom.
+          Spotlight cuts a transparent hole at the cursor position. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 transition-[background] duration-300"
+        className="pointer-events-none absolute inset-0 -z-10 transition-[mask-image,-webkit-mask-image] duration-300"
         style={{
           background:
-            "radial-gradient(circle 230px at var(--spot-x) var(--spot-y), rgba(255,255,255,0.08) 0%, rgba(250,250,247,0.39) 65%)",
+            "linear-gradient(to bottom, rgba(250,250,247,0.40) 0%, rgba(250,250,247,0.15) 28%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.50) 72%, rgba(0,0,0,0.80) 100%)",
+          maskImage:
+            "radial-gradient(circle 230px at var(--spot-x) var(--spot-y), transparent 0%, black 65%)",
+          WebkitMaskImage:
+            "radial-gradient(circle 230px at var(--spot-x) var(--spot-y), transparent 0%, black 65%)",
         }}
       />
 
@@ -96,7 +102,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-foreground/65"
+          className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-background/75 [text-shadow:0_1px_8px_rgba(0,0,0,0.35)]"
         >
           <Compass className="size-4 text-sunset" />
           <span>Agence de communication · Metz · Moselle</span>
@@ -106,7 +112,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-          className="mt-8 max-w-4xl font-display text-5xl leading-[1.02] tracking-tight text-foreground text-balance sm:text-6xl md:text-7xl [text-shadow:0_1px_2px_rgba(255,255,255,0.6)]"
+          className="mt-8 max-w-4xl font-display text-5xl leading-[1.02] tracking-tight text-background text-balance sm:text-6xl md:text-7xl [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]"
         >
           Inventeurs <em className="italic text-sunset">d'aventures</em> pour
           les marques qui n'ont pas froid aux idées.
@@ -116,7 +122,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.25 }}
-          className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80 sm:text-xl"
+          className="mt-8 max-w-2xl text-lg leading-relaxed text-background/90 sm:text-xl [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]"
         >
           Yukom est l'agence de communication qui transforme vos projets
           d'entreprise en récits qui marquent. Stratégie, identité visuelle,
@@ -133,7 +139,7 @@ export function Hero() {
           <Button
             asChild
             size="lg"
-            className="group h-12 rounded-full bg-foreground px-6 text-base text-background hover:bg-foreground/90"
+            className="group h-12 rounded-full bg-background px-6 text-base text-foreground hover:bg-background/90"
           >
             <Link href="/contact">
               Démarrer votre aventure
@@ -144,7 +150,7 @@ export function Hero() {
             asChild
             variant="link"
             size="lg"
-            className="h-12 px-2 text-base text-foreground underline-offset-4 hover:text-sunset"
+            className="h-12 px-2 text-base text-background underline-offset-4 hover:text-sunset"
           >
             <Link href="#services">Découvrir les services</Link>
           </Button>
