@@ -12,21 +12,24 @@ type Logo = {
 
 const DEFAULT_MAX_H = "max-h-10 sm:max-h-12";
 
+// Ordre manuel : on évite Solenso/Sorec adjacents et Google/Humacure adjacents.
 const LOGOS: Logo[] = [
+  { name: "Google", src: "/clients/google.webp" },
   { name: "Aimiya", src: "/clients/aimiya.png" },
-  { name: "Brasserie Le 11", src: "/clients/brasserie-le-11.png" },
+  { name: "Sorec Immobilier", src: "/clients/sorec.png" },
+  { name: "Humacure", src: "/clients/humacure.png" },
   {
     name: "Centre du Pâtis",
     src: "/clients/centre-du-patis.png",
-    maxH: "max-h-20 sm:max-h-24",
+    maxH: "max-h-32 sm:max-h-40",
   },
+  { name: "Solenso", src: "/clients/solenso.png" },
+  { name: "Brasserie Le 11", src: "/clients/brasserie-le-11.png" },
   {
     name: "Claraplast",
     src: "/clients/claraplast.png",
-    maxH: "max-h-12 sm:max-h-16",
+    maxH: "max-h-24 sm:max-h-32",
   },
-  { name: "Google", src: "/clients/google.webp" },
-  { name: "Humacure", src: "/clients/humacure.png" },
   {
     name: "IFA Business School",
     src: "/clients/ifa.png",
@@ -45,10 +48,12 @@ const LOGOS: Logo[] = [
     maxH: "max-h-12 sm:max-h-16",
   },
   { name: "Second Life", src: "/clients/second-life.png" },
-  { name: "Solenso", src: "/clients/solenso.png" },
-  { name: "Sorec Immobilier", src: "/clients/sorec.png" },
   { name: "Sudexpe", src: "/clients/sudexpe.png" },
-  { name: "Ultrace", src: "/clients/ultrace.png" },
+  {
+    name: "Ultrace",
+    src: "/clients/ultrace.png",
+    maxH: "max-h-20 sm:max-h-24",
+  },
   {
     name: "Université de Lorraine",
     src: "/clients/universite-lorraine.png",
@@ -70,13 +75,13 @@ function Group({ ariaHidden = false }: { ariaHidden?: boolean }) {
       {LOGOS.map((logo) => (
         <div
           key={logo.name}
-          className="flex h-20 w-32 shrink-0 items-center justify-center px-3 sm:h-24 sm:w-40 sm:px-4"
+          className="flex h-32 w-32 shrink-0 items-center justify-center px-3 sm:h-40 sm:w-40 sm:px-4"
         >
           <Image
             src={logo.src}
             alt={logo.name}
             width={160}
-            height={80}
+            height={160}
             className={cn("w-auto object-contain", logo.maxH ?? DEFAULT_MAX_H)}
             style={{ filter: logo.filter ?? LOGO_FILTER }}
           />
