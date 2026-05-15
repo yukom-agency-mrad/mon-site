@@ -58,6 +58,9 @@ const LOGOS: Logo[] = [
 
 const LOGO_FILTER = "brightness(0) opacity(0.55)";
 
+const FADE_MASK =
+  "linear-gradient(to right, black 0%, black 88%, transparent 100%)";
+
 function Group({ ariaHidden = false }: { ariaHidden?: boolean }) {
   return (
     <div
@@ -87,17 +90,27 @@ export function ClientsMarquee() {
   return (
     <section
       aria-label="Ils nous ont confié leur aventure"
-      className="bg-[#FCFAF5] py-14 sm:py-20"
+      className="bg-[#FCFAF5] pb-8 pt-4 sm:pb-12 sm:pt-6"
     >
-      <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
-        <p className="text-center text-xs font-medium uppercase tracking-[0.18em] text-foreground/55">
-          Ils nous ont confié leur aventure
-        </p>
-        <div className="mt-10 overflow-hidden">
-          <div className="flex w-max animate-marquee">
-            <Group />
-            <Group ariaHidden />
+      <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
+        <div className="flex items-center gap-6">
+          <div
+            className="min-w-0 flex-1 overflow-hidden"
+            style={{
+              maskImage: FADE_MASK,
+              WebkitMaskImage: FADE_MASK,
+            }}
+          >
+            <div className="flex w-max animate-marquee">
+              <Group />
+              <Group ariaHidden />
+            </div>
           </div>
+          <p className="hidden shrink-0 text-right text-xs font-medium uppercase tracking-[0.18em] text-foreground/60 sm:block">
+            60+ entreprises
+            <br />
+            nous font confiance
+          </p>
         </div>
       </div>
     </section>

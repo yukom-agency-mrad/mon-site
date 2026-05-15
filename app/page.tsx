@@ -16,6 +16,7 @@ export default function HomePage() {
     <>
       <Hero />
       <Pitch />
+      <ClientsMarquee />
       <div className="relative">
         <ExpertiseStrategie />
         <ExpertiseStudioCreatif />
@@ -24,7 +25,6 @@ export default function HomePage() {
       </div>
       <MarqueeBanner />
       <About />
-      <ClientsMarquee />
       <Reviews />
       <ContactCta />
       <Faq />
