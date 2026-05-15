@@ -11,32 +11,35 @@ type Logo = {
   filter?: string;
 };
 
-const DEFAULT_MAX_H = "max-h-6 sm:max-h-8";
-const BIG_H = "max-h-10 sm:max-h-12";
-const XL_H = "max-h-16 sm:max-h-20";
+const DEFAULT_MAX_H = "max-h-7 sm:max-h-8";
+const BIG_H = "max-h-12 sm:max-h-14";
+const XL_H = "max-h-20 sm:max-h-24";
 
 // Ordre manuel : alterne petit / gros, et évite Solenso/Sorec et Google/Humacure adjacents.
 const LOGOS: Logo[] = [
-  { name: "Google", src: "/clients/google.webp", maxH: BIG_H },
-  { name: "Aimiya", src: "/clients/aimiya.png" },
-  { name: "Solenso", src: "/clients/solenso.png" },
   {
-    name: "Brasserie Le 11",
-    src: "/clients/brasserie-le-11.png",
-    maxH: "max-h-6 sm:max-h-7",
+    name: "Google",
+    src: "/clients/google.webp",
+    maxH: "max-h-5 sm:max-h-6",
   },
+  { name: "Aimiya", src: "/clients/aimiya.png" },
+  {
+    name: "Solenso",
+    src: "/clients/solenso.png",
+    maxH: "max-h-4 sm:max-h-5",
+  },
+  { name: "Brasserie Le 11", src: "/clients/brasserie-le-11.png", maxH: BIG_H },
   {
     name: "Kenko",
     src: "/clients/kenko.png",
-    maxH: "max-h-3 sm:max-h-4",
+    maxH: "max-h-5 sm:max-h-6",
   },
   { name: "Claraplast", src: "/clients/claraplast.png", maxH: XL_H },
-  { name: "Sudexpe", src: "/clients/sudexpe.png" },
+  { name: "Sudexpe", src: "/clients/sudexpe.png", maxH: BIG_H },
   {
     name: "IFA Business School",
     src: "/clients/ifa.png",
-    maxH: "max-h-6 sm:max-h-7",
-    filter: "opacity(0.85)",
+    maxH: "max-h-8 sm:max-h-10",
   },
   { name: "Second Life", src: "/clients/second-life.png" },
   { name: "Ultrace", src: "/clients/ultrace.png", maxH: XL_H },
@@ -53,6 +56,7 @@ const LOGOS: Logo[] = [
     name: "Université de Lorraine",
     src: "/clients/universite-lorraine.png",
     maxH: BIG_H,
+    filter: "invert(1) opacity(0.85)",
   },
 ];
 
@@ -70,7 +74,7 @@ function Group({ ariaHidden = false }: { ariaHidden?: boolean }) {
       {LOGOS.map((logo) => (
         <div
           key={logo.name}
-          className="flex h-16 w-32 shrink-0 items-center justify-center px-3 sm:h-20 sm:w-40 sm:px-4"
+          className="flex h-20 w-32 shrink-0 items-center justify-center px-3 sm:h-24 sm:w-40 sm:px-4"
         >
           <Image
             src={logo.src}
@@ -90,7 +94,7 @@ export function ClientsMarquee() {
   return (
     <section
       aria-label="Ils nous ont confié leur aventure"
-      className="bg-[#020B0E] pb-5 pt-3 sm:pb-7 sm:pt-4"
+      className="bg-[#080909] pb-5 pt-3 sm:pb-7 sm:pt-4"
     >
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="flex items-center gap-6">
