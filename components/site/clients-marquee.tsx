@@ -1,19 +1,42 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
-const LOGOS = [
+type Logo = {
+  name: string;
+  src: string;
+  /** Optional per-logo max-height override (Tailwind classes). */
+  maxH?: string;
+};
+
+const DEFAULT_MAX_H = "max-h-12 sm:max-h-14";
+
+const LOGOS: Logo[] = [
   { name: "Aimiya", src: "/clients/aimiya.png" },
-  { name: "Aniodys", src: "/clients/aniodys.png" },
   { name: "Brasserie Le 11", src: "/clients/brasserie-le-11.png" },
-  { name: "Centre du Pâtis", src: "/clients/centre-du-patis.png" },
-  { name: "Claraplast", src: "/clients/claraplast.png" },
+  {
+    name: "Centre du Pâtis",
+    src: "/clients/centre-du-patis.png",
+    maxH: "max-h-20 sm:max-h-24",
+  },
+  {
+    name: "Claraplast",
+    src: "/clients/claraplast.png",
+    maxH: "max-h-16 sm:max-h-20",
+  },
   { name: "Cyclomen", src: "/clients/cyclomen.png" },
-  { name: "Egrego", src: "/clients/egrego.png" },
   { name: "Humacure", src: "/clients/humacure.png" },
   { name: "Kameleon Lab", src: "/clients/kameleon-lab.png" },
-  { name: "Kenko", src: "/clients/kenko.png" },
+  {
+    name: "Kenko",
+    src: "/clients/kenko.png",
+    maxH: "max-h-8 sm:max-h-10",
+  },
   { name: "Kinepolis", src: "/clients/kinepolis.png" },
-  { name: "Les Maisons Cocoon", src: "/clients/maisons-cocoon.png" },
-  { name: "Love Room", src: "/clients/love-room.png" },
+  {
+    name: "Les Maisons Cocoon",
+    src: "/clients/maisons-cocoon.png",
+    maxH: "max-h-20 sm:max-h-24",
+  },
   { name: "Second Life", src: "/clients/second-life.png" },
   { name: "Solenso", src: "/clients/solenso.png" },
   { name: "Sudexpe", src: "/clients/sudexpe.png" },
@@ -30,14 +53,14 @@ function Group({ ariaHidden = false }: { ariaHidden?: boolean }) {
       {LOGOS.map((logo) => (
         <div
           key={logo.name}
-          className="flex h-16 w-40 shrink-0 items-center justify-center px-6 sm:h-20 sm:w-48 sm:px-8"
+          className="flex h-24 w-40 shrink-0 items-center justify-center px-6 sm:h-28 sm:w-48 sm:px-8"
         >
           <Image
             src={logo.src}
             alt={logo.name}
             width={192}
-            height={80}
-            className="max-h-12 w-auto object-contain sm:max-h-14"
+            height={96}
+            className={cn("w-auto object-contain", logo.maxH ?? DEFAULT_MAX_H)}
             style={{ filter: LOGO_FILTER }}
           />
         </div>
