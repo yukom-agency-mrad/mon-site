@@ -15,8 +15,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Pitch />
       <ClientsMarquee />
+      <Pitch />
       <div className="relative">
         <ExpertiseStrategie />
         <ExpertiseStudioCreatif />

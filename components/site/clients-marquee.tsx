@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type Logo = {
@@ -10,53 +11,45 @@ type Logo = {
   filter?: string;
 };
 
-const DEFAULT_MAX_H = "max-h-10 sm:max-h-12";
+const DEFAULT_MAX_H = "max-h-8 sm:max-h-10";
+const BIG_H = "max-h-20 sm:max-h-24";
+const XL_H = "max-h-32 sm:max-h-40";
 
-// Ordre manuel : on évite Solenso/Sorec adjacents et Google/Humacure adjacents.
+// Ordre manuel : alterne petit / gros, et évite Solenso/Sorec et Google/Humacure adjacents.
 const LOGOS: Logo[] = [
-  { name: "Google", src: "/clients/google.webp" },
+  { name: "Google", src: "/clients/google.webp", maxH: BIG_H },
   { name: "Aimiya", src: "/clients/aimiya.png" },
-  { name: "Sorec Immobilier", src: "/clients/sorec.png" },
-  { name: "Humacure", src: "/clients/humacure.png" },
-  {
-    name: "Centre du Pâtis",
-    src: "/clients/centre-du-patis.png",
-    maxH: "max-h-32 sm:max-h-40",
-  },
+  { name: "Centre du Pâtis", src: "/clients/centre-du-patis.png", maxH: XL_H },
   { name: "Solenso", src: "/clients/solenso.png" },
-  { name: "Brasserie Le 11", src: "/clients/brasserie-le-11.png" },
-  {
-    name: "Claraplast",
-    src: "/clients/claraplast.png",
-    maxH: "max-h-24 sm:max-h-32",
-  },
-  {
-    name: "IFA Business School",
-    src: "/clients/ifa.png",
-    filter: "grayscale(1) opacity(0.7)",
-  },
-  { name: "Kameleon Lab", src: "/clients/kameleon-lab.png" },
+  { name: "Brasserie Le 11", src: "/clients/brasserie-le-11.png", maxH: BIG_H },
   {
     name: "Kenko",
     src: "/clients/kenko.png",
     maxH: "max-h-6 sm:max-h-8",
   },
-  { name: "Kinepolis", src: "/clients/kinepolis.png" },
+  { name: "Claraplast", src: "/clients/claraplast.png", maxH: XL_H },
+  { name: "Sudexpe", src: "/clients/sudexpe.png" },
+  {
+    name: "IFA Business School",
+    src: "/clients/ifa.png",
+    maxH: BIG_H,
+    filter: "grayscale(1) opacity(0.7)",
+  },
+  { name: "Second Life", src: "/clients/second-life.png" },
+  { name: "Ultrace", src: "/clients/ultrace.png", maxH: XL_H },
+  { name: "Humacure", src: "/clients/humacure.png" },
+  { name: "Kameleon Lab", src: "/clients/kameleon-lab.png", maxH: BIG_H },
+  { name: "Sorec Immobilier", src: "/clients/sorec.png" },
   {
     name: "Les Maisons Cocoon",
     src: "/clients/maisons-cocoon.png",
-    maxH: "max-h-12 sm:max-h-16",
+    maxH: BIG_H,
   },
-  { name: "Second Life", src: "/clients/second-life.png" },
-  { name: "Sudexpe", src: "/clients/sudexpe.png" },
-  {
-    name: "Ultrace",
-    src: "/clients/ultrace.png",
-    maxH: "max-h-20 sm:max-h-24",
-  },
+  { name: "Kinepolis", src: "/clients/kinepolis.png" },
   {
     name: "Université de Lorraine",
     src: "/clients/universite-lorraine.png",
+    maxH: BIG_H,
     filter: "grayscale(1) opacity(0.7)",
   },
 ];
@@ -111,11 +104,22 @@ export function ClientsMarquee() {
               <Group ariaHidden />
             </div>
           </div>
-          <p className="hidden shrink-0 text-right text-xs font-medium uppercase tracking-[0.18em] text-foreground/60 sm:block">
-            60+ entreprises
-            <br />
-            nous font confiance
-          </p>
+          <div className="hidden shrink-0 sm:block">
+            <div className="flex items-center justify-end gap-0.5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star
+                  key={i}
+                  aria-hidden
+                  className="size-3.5 fill-sunset text-sunset"
+                />
+              ))}
+            </div>
+            <p className="mt-1.5 text-right text-xs font-medium uppercase tracking-[0.18em] text-foreground/60">
+              60+ entreprises
+              <br />
+              nous font confiance
+            </p>
+          </div>
         </div>
       </div>
     </section>
