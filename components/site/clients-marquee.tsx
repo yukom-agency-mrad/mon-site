@@ -36,7 +36,7 @@ const LOGOS: Logo[] = [
     name: "IFA Business School",
     src: "/clients/ifa.png",
     maxH: "max-h-6 sm:max-h-7",
-    filter: "grayscale(1) opacity(0.7)",
+    filter: "opacity(0.85)",
   },
   { name: "Second Life", src: "/clients/second-life.png" },
   { name: "Ultrace", src: "/clients/ultrace.png", maxH: XL_H },
@@ -53,11 +53,10 @@ const LOGOS: Logo[] = [
     name: "Université de Lorraine",
     src: "/clients/universite-lorraine.png",
     maxH: BIG_H,
-    filter: "grayscale(1) opacity(0.7)",
   },
 ];
 
-const LOGO_FILTER = "brightness(0) opacity(0.55)";
+const LOGO_FILTER = "brightness(0) invert(1) opacity(0.75)";
 
 const FADE_MASK =
   "linear-gradient(to right, black 0%, black 88%, transparent 100%)";
@@ -91,7 +90,7 @@ export function ClientsMarquee() {
   return (
     <section
       aria-label="Ils nous ont confié leur aventure"
-      className="bg-white pb-5 pt-3 sm:pb-7 sm:pt-4"
+      className="bg-foreground pb-5 pt-3 sm:pb-7 sm:pt-4"
     >
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="flex items-center gap-6">
@@ -126,7 +125,7 @@ export function ClientsMarquee() {
                 ))}
               </div>
             </div>
-            <p className="mt-1.5 text-right text-xs font-medium uppercase tracking-[0.18em] text-foreground/60">
+            <p className="mt-1.5 text-right text-xs font-medium uppercase tracking-[0.18em] text-background/70">
               60+ entreprises
               <br />
               nous font confiance
