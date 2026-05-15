@@ -151,7 +151,7 @@ export function ContactForm() {
           type="submit"
           size="lg"
           disabled={pending}
-          className="group h-12 rounded-full bg-foreground px-6 text-base text-background hover:bg-foreground/90 disabled:opacity-60"
+          className="group h-12 rounded-full bg-foreground px-6 text-base text-background transition-colors hover:bg-sunset hover:text-background disabled:opacity-60"
         >
           {pending ? "Envoi en cours…" : "Envoyer le message"}
           {!pending && <Send className="ml-2 size-4 transition-transform group-hover:translate-x-0.5" />}

@@ -36,7 +36,7 @@ export function Header() {
           <Button
             asChild
             size="lg"
-            className="rounded-full bg-background px-5 text-foreground hover:bg-background/90"
+            className="rounded-full bg-background px-5 text-foreground transition-colors hover:bg-sunset hover:text-background"
           >
             <Link href="/contact">Commencer l'aventure</Link>
           </Button>
@@ -69,7 +69,7 @@ export function Header() {
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-foreground px-5 text-background"
+              className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-foreground px-5 text-background transition-colors hover:bg-sunset"
             >
               Commencer l'aventure
             </Link>
