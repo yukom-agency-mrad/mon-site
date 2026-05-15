@@ -21,7 +21,11 @@ const LOGOS: Logo[] = [
   { name: "Aimiya", src: "/clients/aimiya.png" },
   { name: "Centre du Pâtis", src: "/clients/centre-du-patis.png", maxH: XL_H },
   { name: "Solenso", src: "/clients/solenso.png" },
-  { name: "Brasserie Le 11", src: "/clients/brasserie-le-11.png", maxH: BIG_H },
+  {
+    name: "Brasserie Le 11",
+    src: "/clients/brasserie-le-11.png",
+    maxH: "max-h-12 sm:max-h-14",
+  },
   {
     name: "Kenko",
     src: "/clients/kenko.png",
