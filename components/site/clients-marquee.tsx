@@ -6,6 +6,8 @@ type Logo = {
   src: string;
   /** Optional per-logo max-height override (Tailwind classes). */
   maxH?: string;
+  /** Optional per-logo CSS filter override. */
+  filter?: string;
 };
 
 const DEFAULT_MAX_H = "max-h-12 sm:max-h-14";
@@ -23,10 +25,13 @@ const LOGOS: Logo[] = [
     src: "/clients/claraplast.png",
     maxH: "max-h-16 sm:max-h-20",
   },
-  { name: "Cyclomen", src: "/clients/cyclomen.png" },
   { name: "Google", src: "/clients/google.webp" },
   { name: "Humacure", src: "/clients/humacure.png" },
-  { name: "IFA Business School", src: "/clients/ifa.png" },
+  {
+    name: "IFA Business School",
+    src: "/clients/ifa.png",
+    filter: "grayscale(1) opacity(0.7)",
+  },
   { name: "Kameleon Lab", src: "/clients/kameleon-lab.png" },
   {
     name: "Kenko",
@@ -43,7 +48,11 @@ const LOGOS: Logo[] = [
   { name: "Solenso", src: "/clients/solenso.png" },
   { name: "Sorec Immobilier", src: "/clients/sorec.png" },
   { name: "Sudexpe", src: "/clients/sudexpe.png" },
-  { name: "Université de Lorraine", src: "/clients/universite-lorraine.png" },
+  {
+    name: "Université de Lorraine",
+    src: "/clients/universite-lorraine.png",
+    filter: "grayscale(1) opacity(0.7)",
+  },
 ];
 
 const LOGO_FILTER = "brightness(0) opacity(0.55)";
@@ -65,7 +74,7 @@ function Group({ ariaHidden = false }: { ariaHidden?: boolean }) {
             width={192}
             height={96}
             className={cn("w-auto object-contain", logo.maxH ?? DEFAULT_MAX_H)}
-            style={{ filter: LOGO_FILTER }}
+            style={{ filter: logo.filter ?? LOGO_FILTER }}
           />
         </div>
       ))}
