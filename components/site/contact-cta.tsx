@@ -41,8 +41,8 @@ export function ContactCta() {
           </div>
 
           <h2 className="mt-6 max-w-3xl font-display text-4xl leading-[1.05] tracking-tight text-background sm:text-5xl md:text-6xl [text-shadow:0_2px_20px_rgba(0,0,0,0.45)]">
-            Curieux·se de voir ce qu'on peut créer{" "}
-            <em className="italic text-sunset">ensemble</em>&nbsp;?
+            Alors, on démarre{" "}
+            <em className="italic text-sunset">l'aventure</em> ensemble&nbsp;?
           </h2>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-background/85 sm:text-lg [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">
