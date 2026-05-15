@@ -19,7 +19,6 @@ const XL_H = "max-h-32 sm:max-h-40";
 const LOGOS: Logo[] = [
   { name: "Google", src: "/clients/google.webp", maxH: BIG_H },
   { name: "Aimiya", src: "/clients/aimiya.png" },
-  { name: "Centre du Pâtis", src: "/clients/centre-du-patis.png", maxH: XL_H },
   { name: "Solenso", src: "/clients/solenso.png" },
   {
     name: "Brasserie Le 11",
@@ -109,14 +108,23 @@ export function ClientsMarquee() {
             </div>
           </div>
           <div className="hidden shrink-0 sm:block">
-            <div className="flex items-center justify-end gap-0.5">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star
-                  key={i}
-                  aria-hidden
-                  className="size-3.5 fill-sunset text-sunset"
-                />
-              ))}
+            <div className="flex items-center justify-end gap-2">
+              <Image
+                src="/google-logo.webp"
+                alt="Google"
+                width={20}
+                height={20}
+                className="size-5"
+              />
+              <div className="flex items-center gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star
+                    key={i}
+                    aria-hidden
+                    className="size-3.5 fill-sunset text-sunset"
+                  />
+                ))}
+              </div>
             </div>
             <p className="mt-1.5 text-right text-xs font-medium uppercase tracking-[0.18em] text-foreground/60">
               60+ entreprises
