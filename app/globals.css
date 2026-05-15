@@ -63,7 +63,7 @@
   --sand: oklch(0.96 0.012 80);         /* sable / off-white chaud (neige) */
 
   --background: oklch(0.985 0.006 85);  /* off-white légèrement chaud */
-  --foreground: oklch(0.18 0.04 155);   /* vert très profond, presque noir */
+  --foreground: oklch(0.20 0.045 215);  /* gris foncé teinté turquoise (presque noir) */
   --card: oklch(1 0 0);
   --card-foreground: var(--foreground);
   --popover: oklch(1 0 0);
