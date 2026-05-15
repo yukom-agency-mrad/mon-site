@@ -32,7 +32,7 @@ const LOGOS: Logo[] = [
   {
     name: "IFA Business School",
     src: "/clients/ifa.png",
-    maxH: BIG_H,
+    maxH: "max-h-12 sm:max-h-14",
     filter: "grayscale(1) opacity(0.7)",
   },
   { name: "Second Life", src: "/clients/second-life.png" },
