@@ -6,13 +6,17 @@ const LOGOS = [
   { name: "Brasserie Le 11", src: "/clients/brasserie-le-11.png" },
   { name: "Centre du Pâtis", src: "/clients/centre-du-patis.png" },
   { name: "Claraplast", src: "/clients/claraplast.png" },
+  { name: "Cyclomen", src: "/clients/cyclomen.png" },
   { name: "Egrego", src: "/clients/egrego.png" },
   { name: "Humacure", src: "/clients/humacure.png" },
   { name: "Kameleon Lab", src: "/clients/kameleon-lab.png" },
   { name: "Kenko", src: "/clients/kenko.png" },
+  { name: "Kinepolis", src: "/clients/kinepolis.png" },
   { name: "Les Maisons Cocoon", src: "/clients/maisons-cocoon.png" },
   { name: "Love Room", src: "/clients/love-room.png" },
   { name: "Second Life", src: "/clients/second-life.png" },
+  { name: "Solenso", src: "/clients/solenso.png" },
+  { name: "Sudexpe", src: "/clients/sudexpe.png" },
 ];
 
 const LOGO_FILTER = "brightness(0) opacity(0.55)";
