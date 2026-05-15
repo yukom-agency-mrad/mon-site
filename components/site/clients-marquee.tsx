@@ -16,7 +16,7 @@ const LOGOS: Logo[] = [
   {
     name: "Centre du Pâtis",
     src: "/clients/centre-du-patis.png",
-    maxH: "max-h-20 sm:max-h-24",
+    maxH: "max-h-24 sm:max-h-28",
   },
   {
     name: "Claraplast",
@@ -37,7 +37,7 @@ const LOGOS: Logo[] = [
   {
     name: "Les Maisons Cocoon",
     src: "/clients/maisons-cocoon.png",
-    maxH: "max-h-20 sm:max-h-24",
+    maxH: "max-h-16 sm:max-h-20",
   },
   { name: "Second Life", src: "/clients/second-life.png" },
   { name: "Solenso", src: "/clients/solenso.png" },
