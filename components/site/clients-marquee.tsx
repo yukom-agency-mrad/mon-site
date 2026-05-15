@@ -91,9 +91,9 @@ export function ClientsMarquee() {
   return (
     <section
       aria-label="Ils nous ont confié leur aventure"
-      className="bg-[#FCFAF5] pb-10 pt-4 sm:pb-16 sm:pt-6"
+      className="bg-white pb-10 pt-6 sm:pb-14 sm:pt-8"
     >
-      <div className="mx-auto w-full max-w-7xl border-b border-foreground/10 px-6 pb-10 sm:px-8 sm:pb-14">
+      <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="flex items-center gap-6">
           <div
             className="min-w-0 flex-1 overflow-hidden"
