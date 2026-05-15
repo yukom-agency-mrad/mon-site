@@ -6,6 +6,7 @@ import { ExpertiseSocialMedia } from "@/components/site/expertise-social-media";
 import { ExpertiseWeb } from "@/components/site/expertise-web";
 import { About } from "@/components/site/about";
 import { MarqueeBanner } from "@/components/site/marquee-banner";
+import { ClientsMarquee } from "@/components/site/clients-marquee";
 import { Reviews } from "@/components/site/reviews";
 import { ContactCta } from "@/components/site/contact-cta";
 import { Faq } from "@/components/site/faq";
@@ -23,6 +24,7 @@ export default function HomePage() {
       </div>
       <MarqueeBanner />
       <About />
+      <ClientsMarquee />
       <Reviews />
       <ContactCta />
       <Faq />
