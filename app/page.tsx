@@ -8,6 +8,7 @@ import { About } from "@/components/site/about";
 import { MarqueeBanner } from "@/components/site/marquee-banner";
 import { Reviews } from "@/components/site/reviews";
 import { ContactCta } from "@/components/site/contact-cta";
+import { Faq } from "@/components/site/faq";
 
 export default function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default function HomePage() {
       <About />
       <Reviews />
       <ContactCta />
+      <Faq />
     </>
   );
 }
