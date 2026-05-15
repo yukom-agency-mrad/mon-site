@@ -41,6 +41,7 @@ const LOGOS: Logo[] = [
   },
   { name: "Second Life", src: "/clients/second-life.png" },
   { name: "Solenso", src: "/clients/solenso.png" },
+  { name: "Sorec Immobilier", src: "/clients/sorec.png" },
   { name: "Sudexpe", src: "/clients/sudexpe.png" },
   { name: "Université de Lorraine", src: "/clients/universite-lorraine.png" },
 ];
