@@ -24,7 +24,9 @@ const LOGOS: Logo[] = [
     maxH: "max-h-16 sm:max-h-20",
   },
   { name: "Cyclomen", src: "/clients/cyclomen.png" },
+  { name: "Google", src: "/clients/google.webp" },
   { name: "Humacure", src: "/clients/humacure.png" },
+  { name: "IFA Business School", src: "/clients/ifa.png" },
   { name: "Kameleon Lab", src: "/clients/kameleon-lab.png" },
   {
     name: "Kenko",
@@ -40,6 +42,7 @@ const LOGOS: Logo[] = [
   { name: "Second Life", src: "/clients/second-life.png" },
   { name: "Solenso", src: "/clients/solenso.png" },
   { name: "Sudexpe", src: "/clients/sudexpe.png" },
+  { name: "Université de Lorraine", src: "/clients/universite-lorraine.png" },
 ];
 
 const LOGO_FILTER = "brightness(0) opacity(0.55)";
