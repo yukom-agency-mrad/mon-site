@@ -11,9 +11,9 @@ type Logo = {
   filter?: string;
 };
 
-const DEFAULT_MAX_H = "max-h-8 sm:max-h-10";
-const BIG_H = "max-h-20 sm:max-h-24";
-const XL_H = "max-h-32 sm:max-h-40";
+const DEFAULT_MAX_H = "max-h-6 sm:max-h-8";
+const BIG_H = "max-h-10 sm:max-h-12";
+const XL_H = "max-h-16 sm:max-h-20";
 
 // Ordre manuel : alterne petit / gros, et évite Solenso/Sorec et Google/Humacure adjacents.
 const LOGOS: Logo[] = [
@@ -23,19 +23,19 @@ const LOGOS: Logo[] = [
   {
     name: "Brasserie Le 11",
     src: "/clients/brasserie-le-11.png",
-    maxH: "max-h-12 sm:max-h-14",
+    maxH: "max-h-6 sm:max-h-7",
   },
   {
     name: "Kenko",
     src: "/clients/kenko.png",
-    maxH: "max-h-6 sm:max-h-8",
+    maxH: "max-h-3 sm:max-h-4",
   },
   { name: "Claraplast", src: "/clients/claraplast.png", maxH: XL_H },
   { name: "Sudexpe", src: "/clients/sudexpe.png" },
   {
     name: "IFA Business School",
     src: "/clients/ifa.png",
-    maxH: "max-h-12 sm:max-h-14",
+    maxH: "max-h-6 sm:max-h-7",
     filter: "grayscale(1) opacity(0.7)",
   },
   { name: "Second Life", src: "/clients/second-life.png" },
@@ -71,7 +71,7 @@ function Group({ ariaHidden = false }: { ariaHidden?: boolean }) {
       {LOGOS.map((logo) => (
         <div
           key={logo.name}
-          className="flex h-32 w-32 shrink-0 items-center justify-center px-3 sm:h-40 sm:w-40 sm:px-4"
+          className="flex h-16 w-32 shrink-0 items-center justify-center px-3 sm:h-20 sm:w-40 sm:px-4"
         >
           <Image
             src={logo.src}
@@ -91,7 +91,7 @@ export function ClientsMarquee() {
   return (
     <section
       aria-label="Ils nous ont confié leur aventure"
-      className="bg-white pb-10 pt-6 sm:pb-14 sm:pt-8"
+      className="bg-white pb-5 pt-3 sm:pb-7 sm:pt-4"
     >
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="flex items-center gap-6">
