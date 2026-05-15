@@ -90,7 +90,7 @@ export function ClientsMarquee() {
   return (
     <section
       aria-label="Ils nous ont confié leur aventure"
-      className="bg-foreground pb-5 pt-3 sm:pb-7 sm:pt-4"
+      className="bg-[#020B0E] pb-5 pt-3 sm:pb-7 sm:pt-4"
     >
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8">
         <div className="flex items-center gap-6">
