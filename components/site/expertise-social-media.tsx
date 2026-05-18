@@ -13,7 +13,7 @@ export function ExpertiseSocialMedia() {
   return (
     <section
       id="social-media"
-      className="sticky top-[10rem] bg-[#FCFAF5]"
+      className="bg-[#FCFAF5] md:sticky md:top-[10rem]"
     >
       <div className="mx-auto w-full max-w-7xl px-6 pt-0 pb-3 sm:px-8">
         <div className="rounded-2xl border border-sunset bg-[#FCFAF5] p-6 sm:p-10 md:p-12">

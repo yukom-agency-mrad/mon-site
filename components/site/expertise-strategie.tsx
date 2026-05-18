@@ -10,13 +10,13 @@ const SUB_CATEGORIES = [
 
 export function ExpertiseStrategie() {
   return (
-    <section id="strategie" className="sticky top-0 bg-[#FCFAF5]">
+    <section id="strategie" className="bg-[#FCFAF5] md:sticky md:top-0">
       {/* sticky offset 0 — base de la pile (1ère carte) */}
       <div className="mx-auto w-full max-w-7xl px-6 pt-0 pb-3 sm:px-8">
         <div className="relative rounded-2xl border border-sunset bg-[#FCFAF5] p-6 sm:p-10 md:p-12">
           <div
             aria-hidden
-            className="pointer-events-none absolute right-4 top-4 size-24 sm:right-6 sm:top-6 sm:size-28 md:right-8 md:top-8 md:size-32"
+            className="pointer-events-none absolute right-4 top-4 z-10 size-24 sm:right-6 sm:top-6 sm:size-28 md:right-8 md:top-8 md:size-32"
           >
             <svg
               viewBox="0 0 200 200"

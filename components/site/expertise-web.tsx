@@ -11,7 +11,7 @@ const SUB_CATEGORIES = [
 
 export function ExpertiseWeb() {
   return (
-    <section id="web" className="sticky top-[15rem] bg-[#FCFAF5]">
+    <section id="web" className="bg-[#FCFAF5] md:sticky md:top-[15rem]">
       <div className="mx-auto w-full max-w-7xl px-6 pt-0 pb-3 sm:px-8">
         <div className="rounded-2xl border border-sunset bg-[#FCFAF5] p-6 sm:p-10 md:p-12">
           <div className="grid gap-10 md:grid-cols-12 md:gap-14 md:items-stretch">
