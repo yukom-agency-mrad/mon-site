@@ -42,7 +42,13 @@ export async function Reviews() {
           </div>
 
           {rating && userRatingCount ? (
-            <div className="flex items-center gap-4 rounded-2xl border border-border bg-card px-5 py-3">
+            <a
+              href="https://share.google/Ag0BzIR53cm6L2h0M"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Voir nos ${userRatingCount} avis Google (note ${rating.toFixed(1)} sur 5)`}
+              className="flex items-center gap-4 rounded-2xl border border-border bg-card px-5 py-3 transition-colors hover:bg-card/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunset"
+            >
               <Image
                 src="/google-logo.webp"
                 alt="Google"
@@ -64,7 +70,7 @@ export async function Reviews() {
                   </span>
                 </div>
               </div>
-            </div>
+            </a>
           ) : null}
         </div>
 
