@@ -41,8 +41,8 @@ export function ContactCta() {
           </div>
 
           <h2 className="mt-6 max-w-3xl font-display text-4xl leading-[1.05] tracking-tight text-background sm:text-5xl md:text-6xl [text-shadow:0_2px_20px_rgba(0,0,0,0.45)]">
-            Curieux·se de voir{" "}
-            <em className="italic text-sunset">où l'aventure</em>{" "}
+            Curieux·se de voir où{" "}
+            <em className="italic text-sunset">votre histoire</em>{" "}
             peut nous mener&nbsp;?
           </h2>
 
