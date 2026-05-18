@@ -13,7 +13,31 @@ export function ExpertiseStrategie() {
     <section id="strategie" className="sticky top-0 bg-[#FCFAF5]">
       {/* sticky offset 0 — base de la pile (1ère carte) */}
       <div className="mx-auto w-full max-w-7xl px-6 pt-0 pb-3 sm:px-8">
-        <div className="rounded-2xl border border-sunset bg-[#FCFAF5] p-6 sm:p-10 md:p-12">
+        <div className="relative rounded-2xl border border-sunset bg-[#FCFAF5] p-6 sm:p-10 md:p-12">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute right-4 top-4 size-24 sm:right-6 sm:top-6 sm:size-28 md:right-8 md:top-8 md:size-32"
+          >
+            <svg
+              viewBox="0 0 200 200"
+              className="size-full animate-spin-slow"
+              style={{ transformOrigin: "center" }}
+            >
+              <defs>
+                <path
+                  id="strategie-circle"
+                  d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"
+                  fill="none"
+                />
+              </defs>
+              <text className="fill-sunset text-[22px] font-medium uppercase tracking-[0.22em]">
+                <textPath href="#strategie-circle" startOffset="0">
+                  Communication 360° · Communication 360° ·
+                </textPath>
+              </text>
+            </svg>
+          </div>
+
           <div className="grid gap-10 md:grid-cols-12 md:gap-14 md:items-stretch">
           {/* Image — left column, stretches to match content height */}
           <div className="md:col-span-5">

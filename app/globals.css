@@ -6,6 +6,7 @@
 
 @theme inline {
   --animate-marquee: marquee 55s linear infinite;
+  --animate-spin-slow: spin-cw 18s linear infinite;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
@@ -140,8 +141,18 @@
   }
 }
 
+@keyframes spin-cw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
+  .animate-marquee,
+  .animate-spin-slow {
     animation: none !important;
   }
 }
