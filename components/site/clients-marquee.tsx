@@ -56,10 +56,28 @@ const LOGOS: Logo[] = [
   { name: "Egrego", src: "/clients/egrego.svg" },
   { name: "Smart Up Formation", src: "/clients/smartup.png" },
   { name: "Conseil", src: "/clients/conseil.png" },
-  { name: "BPC-ESC by ifpass", src: "/clients/bpc-esc.png" },
-  { name: "Smiley", src: "/clients/smiley.png" },
-  { name: "Moselle Attractivité", src: "/clients/moselle-attractivite.png" },
-  { name: "Le Billot Lorrain", src: "/clients/billot-lorrain.png" },
+  {
+    name: "BPC-ESC by ifpass",
+    src: "/clients/bpc-esc.png",
+    maxH: BIG_H,
+    filter: "invert(1) grayscale(1) opacity(0.9)",
+  },
+  {
+    name: "Smiley",
+    src: "/clients/smiley.png",
+    filter: "invert(1) grayscale(1) opacity(0.9)",
+  },
+  {
+    name: "Moselle Attractivité",
+    src: "/clients/moselle-attractivite.png",
+    filter: "invert(1) grayscale(1) opacity(0.9)",
+  },
+  {
+    name: "Le Billot Lorrain",
+    src: "/clients/billot-lorrain.png",
+    maxH: BIG_H,
+    filter: "invert(1) grayscale(1) opacity(0.9)",
+  },
   {
     name: "Université de Lorraine",
     src: "/clients/universite-lorraine.png",
