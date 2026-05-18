@@ -17,7 +17,7 @@ export default function HomePage() {
       <Hero />
       <ClientsMarquee />
       <Pitch />
-      <div className="relative overflow-x-clip">
+      <div className="relative">
         <ExpertiseStrategie />
         <ExpertiseStudioCreatif />
         <ExpertiseSocialMedia />

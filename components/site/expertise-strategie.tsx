@@ -16,7 +16,7 @@ export function ExpertiseStrategie() {
         <div className="relative rounded-2xl border border-sunset bg-[#FCFAF5] p-6 sm:p-10 md:p-12">
           <div
             aria-hidden
-            className="pointer-events-none absolute -right-12 -top-12 size-24 sm:-right-14 sm:-top-14 sm:size-28 md:-right-16 md:-top-16 md:size-32"
+            className="pointer-events-none absolute right-4 top-4 size-24 sm:right-6 sm:top-6 sm:size-28 md:right-8 md:top-8 md:size-32"
           >
             <svg
               viewBox="0 0 200 200"
