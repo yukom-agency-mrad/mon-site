@@ -8,10 +8,24 @@ export function About() {
       <div className="mx-auto w-full max-w-7xl px-6 pt-24 pb-12 sm:px-8 sm:pt-32 sm:pb-16">
         <div className="grid gap-10 md:grid-cols-3 md:gap-12 lg:gap-16">
           {/* Left — accroche, alignée en haut */}
-          <p className="text-xl font-medium leading-[1.2] tracking-[-0.02em] text-foreground text-balance sm:text-2xl md:order-first md:mt-5 md:self-start md:text-[1.65rem]">
-            Je collabore avec les entreprises et les organisations qui aiment
-            sortir des sentiers battus.
-          </p>
+          <div className="md:order-first md:mt-5 md:self-start">
+            <p className="text-xl font-medium leading-[1.2] tracking-[-0.02em] text-foreground text-balance sm:text-2xl md:text-[1.65rem]">
+              Je collabore avec les entreprises et les organisations qui aiment
+              sortir des sentiers battus.
+            </p>
+            <a
+              href="https://api.whatsapp.com/send/?phone=33783870295&text&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2.5 text-sm font-medium text-foreground/85 transition-colors hover:text-sunset"
+            >
+              <span className="relative flex size-2.5" aria-hidden>
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
+              </span>
+              Me contacter
+            </a>
+          </div>
 
           {/* Center — portrait + label */}
           <div className="order-first md:order-none">
