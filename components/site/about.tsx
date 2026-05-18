@@ -20,8 +20,8 @@ export function About() {
               className="mt-6 inline-flex items-center gap-2.5 text-[10px] font-medium uppercase tracking-[0.18em] text-foreground/80 transition-colors hover:text-sunset sm:text-xs"
             >
               <span className="relative flex size-2.5" aria-hidden>
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sunset opacity-75" />
+                <span className="relative inline-flex size-2.5 rounded-full bg-sunset" />
               </span>
               Me contacter sur Whatsapp
             </a>
