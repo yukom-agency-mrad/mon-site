@@ -1,6 +1,6 @@
 "use server";
 
-const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "maud_mrad@hotmail.fr";
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "maudmrad.erau@gmail.com";
 const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL ?? "Yukom <onboarding@resend.dev>";
 
 export type ContactState = {
