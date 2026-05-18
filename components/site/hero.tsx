@@ -128,7 +128,7 @@ export function Hero() {
           <Button
             asChild
             size="lg"
-            className="group h-12 rounded-full bg-background px-6 text-base text-foreground transition-colors hover:bg-sunset hover:text-background"
+            className="group h-12 rounded-full bg-background px-6 text-base text-foreground transition-colors hover:bg-sunset hover:text-background [a]:hover:bg-sunset [a]:hover:text-background"
           >
             <Link href="/contact">
               Démarrer votre aventure
