@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Award } from "lucide-react";
+import { Award, Linkedin } from "lucide-react";
 
 export function About() {
   return (
@@ -24,9 +24,20 @@ export function About() {
                   className="object-cover"
                 />
               </div>
-              <p className="mt-3 text-[10px] font-medium uppercase tracking-[0.18em] text-foreground/80 sm:mt-4 sm:text-xs">
-                Maud Mrad · Fondatrice Yukom
-              </p>
+              <div className="mt-3 flex items-center justify-center gap-2 sm:mt-4">
+                <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-foreground/80 sm:text-xs">
+                  Maud Mrad · Fondatrice Yukom
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/maud-mrad/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Profil LinkedIn de Maud Mrad"
+                  className="inline-flex text-foreground/70 transition-colors hover:text-sunset"
+                >
+                  <Linkedin className="size-3.5 sm:size-4" />
+                </a>
+              </div>
             </div>
           </div>
 
