@@ -54,7 +54,7 @@ export function ContactCta() {
             <Button
               asChild
               size="lg"
-              className="group h-12 rounded-full bg-foreground px-6 text-base text-background transition-colors hover:bg-sunset [a]:hover:bg-sunset"
+              className="group h-12 rounded-full bg-sunset px-6 text-base text-background transition-colors hover:bg-background hover:text-foreground [a]:hover:bg-background [a]:hover:text-foreground"
             >
               <Link href="/contact">
                 Démarrer la conversation

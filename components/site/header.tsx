@@ -36,7 +36,7 @@ export function Header() {
           <Button
             asChild
             size="lg"
-            className="rounded-full bg-background px-5 text-foreground transition-colors hover:bg-sunset hover:text-background"
+            className="rounded-full bg-background px-5 text-foreground transition-colors hover:bg-sunset hover:text-background [a]:hover:bg-sunset [a]:hover:text-background"
           >
             <Link href="/contact">Commencer l'aventure</Link>
           </Button>
