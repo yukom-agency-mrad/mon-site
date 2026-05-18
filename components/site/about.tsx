@@ -24,7 +24,7 @@ export function About() {
                   className="object-cover"
                 />
               </div>
-              <div className="mt-3 flex items-center justify-center gap-2 sm:mt-4">
+              <div className="mt-3 flex items-center justify-center gap-2.5 sm:mt-4">
                 <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-foreground/80 sm:text-xs">
                   Maud Mrad · Fondatrice Yukom
                 </p>
@@ -33,9 +33,9 @@ export function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Profil LinkedIn de Maud Mrad"
-                  className="inline-flex text-foreground/70 transition-colors hover:text-sunset"
+                  className="inline-flex size-7 items-center justify-center rounded-full bg-sunset text-background transition-colors hover:bg-foreground"
                 >
-                  <Linkedin className="size-3.5 sm:size-4" />
+                  <Linkedin className="size-3.5" />
                 </a>
               </div>
             </div>
