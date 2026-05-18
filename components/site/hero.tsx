@@ -141,7 +141,7 @@ export function Hero() {
             size="lg"
             className="h-12 px-2 text-base text-background underline-offset-4 hover:text-sunset"
           >
-            <Link href="#services">Découvrir les services</Link>
+            <Link href="#strategie">Découvrir les services</Link>
           </Button>
         </motion.div>
       </div>
