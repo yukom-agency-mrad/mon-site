@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Award, Linkedin } from "lucide-react";
+import { Award } from "lucide-react";
+import { LinkedinIcon } from "./icons";
 
 export function About() {
   return (
@@ -35,7 +36,7 @@ export function About() {
                   aria-label="Profil LinkedIn de Maud Mrad"
                   className="inline-flex size-7 items-center justify-center rounded-full bg-sunset text-background transition-colors hover:bg-foreground"
                 >
-                  <Linkedin className="size-3.5" />
+                  <LinkedinIcon className="size-3.5" />
                 </a>
               </div>
             </div>

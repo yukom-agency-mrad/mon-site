@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import type { GoogleReview } from "@/lib/google-places";
 import { cn } from "@/lib/utils";
 
 const PER_PAGE = 3;
+const AUTO_ADVANCE_MS = 6000;
 
 function Stars({ value, className }: { value: number; className?: string }) {
   return (
@@ -33,6 +34,7 @@ export function ReviewsCarousel({ reviews }: { reviews: GoogleReview[] }) {
   const totalPages = Math.max(1, Math.ceil(reviews.length / PER_PAGE));
   const [page, setPage] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   const visible = reviews.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
 
@@ -41,8 +43,27 @@ export function ReviewsCarousel({ reviews }: { reviews: GoogleReview[] }) {
     setPage((p) => (p + delta + totalPages) % totalPages);
   };
 
+  useEffect(() => {
+    if (paused || totalPages <= 1) return;
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    const id = window.setInterval(() => {
+      setDirection(1);
+      setPage((p) => (p + 1) % totalPages);
+    }, AUTO_ADVANCE_MS);
+    return () => window.clearInterval(id);
+  }, [paused, totalPages]);
+
   return (
-    <div className="mt-12 sm:mt-16">
+    <div
+      className="mt-12 sm:mt-16"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocusCapture={() => setPaused(true)}
+      onBlurCapture={() => setPaused(false)}
+    >
       <div className="relative overflow-hidden">
         <AnimatePresence mode="wait" initial={false} custom={direction}>
           <motion.ul
