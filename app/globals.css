@@ -6,6 +6,7 @@
 
 @theme inline {
   --animate-marquee: marquee 55s linear infinite;
+  --animate-reviews-marquee: marquee 90s linear infinite;
   --animate-spin-slow: spin-cw 18s linear infinite;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -152,6 +153,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
+  .animate-reviews-marquee,
   .animate-spin-slow {
     animation: none !important;
   }

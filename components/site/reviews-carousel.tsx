@@ -1,13 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { Quote, Star } from "lucide-react";
 import type { GoogleReview } from "@/lib/google-places";
 import { cn } from "@/lib/utils";
-
-const PER_PAGE = 3;
-const AUTO_ADVANCE_MS = 6000;
 
 function Stars({ value, className }: { value: number; className?: string }) {
   return (
@@ -30,31 +26,39 @@ function Stars({ value, className }: { value: number; className?: string }) {
   );
 }
 
+function Card({ review }: { review: GoogleReview }) {
+  return (
+    <li className="group relative flex w-[300px] shrink-0 flex-col gap-5 rounded-2xl border border-border bg-card p-7 transition-colors duration-300 hover:border-sunset/40 sm:w-[340px]">
+      <Quote className="size-6 text-sunset/70" />
+      <p className="text-base leading-relaxed text-foreground/85 text-pretty">
+        {review.text.length > 320
+          ? `${review.text.slice(0, 317).trimEnd()}…`
+          : review.text}
+      </p>
+      <div className="mt-auto flex items-center justify-between border-t border-border/70 pt-5">
+        <div>
+          <p className="text-sm font-medium text-foreground">
+            {review.authorName}
+          </p>
+          {review.relativeTime ? (
+            <p className="mt-0.5 text-xs text-foreground/55">
+              {review.relativeTime}
+            </p>
+          ) : null}
+        </div>
+        <Stars value={review.rating} />
+      </div>
+    </li>
+  );
+}
+
+const FADE_MASK =
+  "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)";
+
 export function ReviewsCarousel({ reviews }: { reviews: GoogleReview[] }) {
-  const totalPages = Math.max(1, Math.ceil(reviews.length / PER_PAGE));
-  const [page, setPage] = useState(0);
-  const [direction, setDirection] = useState(0);
   const [paused, setPaused] = useState(false);
 
-  const visible = reviews.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
-
-  const go = (delta: 1 | -1) => {
-    setDirection(delta);
-    setPage((p) => (p + delta + totalPages) % totalPages);
-  };
-
-  useEffect(() => {
-    if (paused || totalPages <= 1) return;
-    const reduce =
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return;
-    const id = window.setInterval(() => {
-      setDirection(1);
-      setPage((p) => (p + 1) % totalPages);
-    }, AUTO_ADVANCE_MS);
-    return () => window.clearInterval(id);
-  }, [paused, totalPages]);
+  if (reviews.length === 0) return null;
 
   return (
     <div
@@ -64,92 +68,23 @@ export function ReviewsCarousel({ reviews }: { reviews: GoogleReview[] }) {
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
     >
-      <div className="relative overflow-hidden">
-        <AnimatePresence mode="wait" initial={false} custom={direction}>
-          <motion.ul
-            key={page}
-            custom={direction}
-            initial={{ opacity: 0, x: direction * 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: direction * -40 }}
-            transition={{ duration: 0.35, ease: "easeOut" }}
-            className="grid gap-6 md:grid-cols-3"
-          >
-            {visible.map((review, i) => (
-              <li
-                key={`${review.authorName}-${page}-${i}`}
-                className="group relative flex flex-col gap-5 rounded-2xl border border-border bg-card p-7 transition-colors duration-300 hover:border-sunset/40"
-              >
-                <Quote className="size-6 text-sunset/70" />
-
-                <p className="text-base leading-relaxed text-foreground/85 text-pretty">
-                  {review.text.length > 320
-                    ? `${review.text.slice(0, 317).trimEnd()}…`
-                    : review.text}
-                </p>
-
-                <div className="mt-auto flex items-center justify-between border-t border-border/70 pt-5">
-                  <div>
-                    <p className="text-sm font-medium text-foreground">
-                      {review.authorName}
-                    </p>
-                    {review.relativeTime ? (
-                      <p className="mt-0.5 text-xs text-foreground/55">
-                        {review.relativeTime}
-                      </p>
-                    ) : null}
-                  </div>
-                  <Stars value={review.rating} />
-                </div>
-              </li>
-            ))}
-          </motion.ul>
-        </AnimatePresence>
+      <div
+        className="overflow-hidden"
+        style={{ maskImage: FADE_MASK, WebkitMaskImage: FADE_MASK }}
+      >
+        <ul
+          className="flex w-max gap-6 animate-reviews-marquee"
+          style={paused ? { animationPlayState: "paused" } : undefined}
+          aria-label="Avis Google clients"
+        >
+          {reviews.map((review, i) => (
+            <Card key={`a-${i}`} review={review} />
+          ))}
+          {reviews.map((review, i) => (
+            <Card key={`b-${i}`} review={review} />
+          ))}
+        </ul>
       </div>
-
-      {totalPages > 1 && (
-        <div className="mt-8 flex items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            {Array.from({ length: totalPages }).map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => {
-                  setDirection(i > page ? 1 : -1);
-                  setPage(i);
-                }}
-                aria-label={`Aller à la page ${i + 1} sur ${totalPages}`}
-                aria-current={i === page ? "true" : undefined}
-                className={cn(
-                  "h-2 rounded-full transition-all",
-                  i === page
-                    ? "w-8 bg-sunset"
-                    : "w-2 bg-foreground/20 hover:bg-foreground/40",
-                )}
-              />
-            ))}
-          </div>
-
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => go(-1)}
-              aria-label="Avis précédents"
-              className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-card text-foreground transition-colors hover:border-sunset hover:text-sunset"
-            >
-              <ChevronLeft className="size-4" />
-            </button>
-            <button
-              type="button"
-              onClick={() => go(1)}
-              aria-label="Avis suivants"
-              className="inline-flex size-11 items-center justify-center rounded-full border border-border bg-card text-foreground transition-colors hover:border-sunset hover:text-sunset"
-            >
-              <ChevronRight className="size-4" />
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
