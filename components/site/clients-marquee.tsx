@@ -53,6 +53,7 @@ const LOGOS: Logo[] = [
     maxH: BIG_H,
   },
   { name: "Kinepolis", src: "/clients/kinepolis.png" },
+  { name: "Egrego", src: "/clients/egrego.svg" },
   {
     name: "Université de Lorraine",
     src: "/clients/universite-lorraine.png",
