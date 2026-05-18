@@ -6,40 +6,12 @@ export function Footer() {
   return (
     <footer className="bg-foreground text-background">
       <div className="mx-auto w-full max-w-7xl px-6 py-16 sm:px-8 sm:py-20">
-        <div className="grid gap-12 md:grid-cols-3 md:gap-16">
+        <div className="grid gap-12 md:grid-cols-2 md:gap-16">
           <div>
             <Logo className="text-3xl text-background" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-background/70">
               L'agence de com' pour les aventures de votre entreprise. Basée à Metz, Moselle.
             </p>
-          </div>
-
-          <div>
-            <p className="text-xs uppercase tracking-widest text-background/50">
-              Boussole
-            </p>
-            <ul className="mt-5 space-y-3 text-sm">
-              <li>
-                <Link href="/#services" className="text-background/85 transition-colors hover:text-sunset">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/#a-propos" className="text-background/85 transition-colors hover:text-sunset">
-                  À propos
-                </Link>
-              </li>
-              <li>
-                <Link href="/#avis" className="text-background/85 transition-colors hover:text-sunset">
-                  Avis
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-background/85 transition-colors hover:text-sunset">
-                  Contact
-                </Link>
-              </li>
-            </ul>
           </div>
 
           <div>
