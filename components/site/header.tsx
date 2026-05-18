@@ -1,16 +1,26 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./logo";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const onLightPage = pathname !== "/";
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header
+      className={cn(
+        "absolute inset-x-0 top-0 z-50",
+        onLightPage &&
+          "bg-foreground/15 backdrop-blur-md supports-[backdrop-filter]:bg-foreground/10",
+      )}
+    >
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 sm:h-20 sm:px-8">
         <Logo />
 

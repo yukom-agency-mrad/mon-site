@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
-import { InstagramIcon, LinkedinIcon } from "@/components/site/icons";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Démarrons votre aventure. Parlez-nous de votre projet, on revient vers vous sous 48 h.",
+    "Racontez-nous votre histoire. Quelques lignes suffisent, on vous recontacte dans la foulée.",
 };
 
 export default function ContactPage() {
@@ -19,12 +17,11 @@ export default function ContactPage() {
             <span className="text-sunset">★</span> Démarrer une aventure
           </p>
           <h1 className="mt-5 font-display text-5xl leading-[1.02] tracking-tight text-foreground text-balance sm:text-6xl md:text-7xl">
-            Racontez-nous votre <em className="italic text-sunset">cap</em>.
+            Racontez-nous votre <em className="italic text-sunset">histoire</em>.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/75">
-            Un projet à lancer, une marque à repositionner, un site qui dort en
-            mode bivouac&nbsp;? Quelques lignes suffisent — on revient vers
-            vous sous 48&nbsp;h ouvrées avec une première piste.
+            Quelques lignes suffisent. On vous recontacte dans la foulée pour
+            en discuter autour d'un café.
           </p>
         </div>
 
@@ -72,39 +69,9 @@ export default function ContactPage() {
                 <ul className="mt-5 space-y-4 text-sm text-foreground/75">
                   <li className="flex items-start gap-3">
                     <MapPin className="mt-0.5 size-4 shrink-0 text-sunset" />
-                    <span>Basée à Metz · Interventions en Moselle et à distance</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Clock className="mt-0.5 size-4 shrink-0 text-sunset" />
-                    <span>Lundi → Vendredi · 9h — 18h</span>
+                    <span>Basée à Metz et partout ailleurs</span>
                   </li>
                 </ul>
-              </div>
-
-              <div>
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-foreground/60">
-                  Suivre Yukom
-                </p>
-                <div className="mt-5 flex items-center gap-3">
-                  <Link
-                    href="https://www.instagram.com/yukom.agency/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram Yukom"
-                    className="inline-flex size-10 items-center justify-center rounded-full bg-muted text-foreground/70 transition-colors hover:bg-sunset/10 hover:text-sunset"
-                  >
-                    <InstagramIcon className="size-4" />
-                  </Link>
-                  <Link
-                    href="https://www.linkedin.com/in/maud-mrad-294463ba/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn Maud Mrad"
-                    className="inline-flex size-10 items-center justify-center rounded-full bg-muted text-foreground/70 transition-colors hover:bg-sunset/10 hover:text-sunset"
-                  >
-                    <LinkedinIcon className="size-4" />
-                  </Link>
-                </div>
               </div>
             </div>
           </aside>

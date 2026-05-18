@@ -102,7 +102,7 @@ export async function sendContact(
 
     return {
       status: "success",
-      message: "Message envoyé ! On revient vers vous sous 48 h.",
+      message: "Message envoyé ! On vous recontacte dans la foulée.",
     };
   } catch (err) {
     console.error("[contact] fetch error:", err);
