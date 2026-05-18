@@ -109,15 +109,15 @@ export function Hero() {
       />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-8">
-        <motion.div
+        <motion.h1
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-background/75 [text-shadow:0_1px_8px_rgba(0,0,0,0.35)]"
         >
-          <Compass className="size-4 text-sunset" />
+          <Compass className="size-4 text-sunset" aria-hidden />
           <span>Agence de marketing et communication · Metz · Moselle</span>
-        </motion.div>
+        </motion.h1>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
