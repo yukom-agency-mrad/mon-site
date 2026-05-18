@@ -136,12 +136,18 @@ export function Hero() {
             </Link>
           </Button>
           <Button
-            asChild
+            type="button"
             variant="link"
             size="lg"
             className="h-12 px-2 text-base text-background underline-offset-4 hover:text-sunset"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("strategie")
+                ?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
           >
-            <Link href="#strategie">Découvrir les services</Link>
+            Découvrir les services
           </Button>
         </motion.div>
       </div>
