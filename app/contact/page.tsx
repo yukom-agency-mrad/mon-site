@@ -17,7 +17,7 @@ export default function ContactPage() {
             <span className="text-sunset">★</span> Démarrer une aventure
           </p>
           <h1 className="mt-5 font-display text-5xl leading-[1.02] tracking-tight text-foreground text-balance sm:text-6xl md:text-7xl">
-            Racontez-nous votre <em className="italic text-sunset">histoire</em>.
+            Racontez-nous <em className="italic text-sunset">votre histoire</em>.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/75">
             Quelques lignes suffisent. On vous recontacte dans la foulée pour

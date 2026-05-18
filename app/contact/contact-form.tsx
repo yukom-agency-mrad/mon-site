@@ -143,10 +143,7 @@ export function ContactForm() {
         </div>
       ) : null}
 
-      <div className="flex items-center justify-between gap-4 pt-2">
-        <p className="text-xs text-foreground/55">
-          Réponse sous 48&nbsp;h ouvrées.
-        </p>
+      <div className="flex items-center justify-end gap-4 pt-2">
         <Button
           type="submit"
           size="lg"

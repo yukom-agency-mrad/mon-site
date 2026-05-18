@@ -18,7 +18,7 @@ export function Header() {
       className={cn(
         "absolute inset-x-0 top-0 z-50",
         onLightPage &&
-          "bg-foreground/15 backdrop-blur-md supports-[backdrop-filter]:bg-foreground/10",
+          "bg-foreground/70 backdrop-blur-md supports-[backdrop-filter]:bg-foreground/55",
       )}
     >
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 sm:h-20 sm:px-8">
