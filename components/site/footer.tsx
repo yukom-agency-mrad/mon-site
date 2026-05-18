@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
-import { InstagramIcon, LinkedinIcon } from "./icons";
 import { Logo } from "./logo";
 
 export function Footer() {
@@ -45,7 +44,7 @@ export function Footer() {
 
           <div>
             <p className="text-xs uppercase tracking-widest text-background/50">
-              Sac à dos
+              Parlons de votre projet
             </p>
             <ul className="mt-5 space-y-3 text-sm">
               <li>
@@ -66,33 +65,21 @@ export function Footer() {
                   07 83 87 02 95
                 </a>
               </li>
-              <li className="flex items-center gap-4 pt-2">
-                <a
-                  href="https://www.instagram.com/yukom.agency/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram Yukom"
-                  className="text-background/70 transition-colors hover:text-sunset"
-                >
-                  <InstagramIcon className="size-5" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/maud-mrad-294463ba/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn Maud Mrad"
-                  className="text-background/70 transition-colors hover:text-sunset"
-                >
-                  <LinkedinIcon className="size-5" />
-                </a>
-              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-16 flex flex-col gap-2 border-t border-background/10 pt-8 text-xs text-background/55 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Yukom — Tous droits réservés.</p>
-          <p>SIRET 97791839000013 · Metz, Moselle</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <p>SIRET 97791839000013 · Metz, Moselle</p>
+            <Link
+              href="/mentions-legales"
+              className="text-background/70 transition-colors hover:text-sunset"
+            >
+              Mentions légales
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
