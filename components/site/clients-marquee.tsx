@@ -40,6 +40,7 @@ const LOGOS: Logo[] = [
     name: "IFA Business School",
     src: "/clients/ifa.png",
     maxH: "max-h-8 sm:max-h-10",
+    filter: "invert(1) grayscale(1) brightness(1.15) opacity(0.9)",
   },
   { name: "Second Life", src: "/clients/second-life.png" },
   { name: "Ultrace", src: "/clients/ultrace.png", maxH: XL_H },
