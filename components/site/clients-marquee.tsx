@@ -56,7 +56,7 @@ const LOGOS: Logo[] = [
     name: "Université de Lorraine",
     src: "/clients/universite-lorraine.png",
     maxH: BIG_H,
-    filter: "brightness(0) invert(1) opacity(0.85)",
+    filter: "invert(1) grayscale(1) opacity(0.85)",
   },
 ];
 
