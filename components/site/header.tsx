@@ -45,12 +45,12 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-border/60 bg-background/95 backdrop-blur-md md:hidden">
+        <div className="md:hidden">
           <nav className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-6 py-4">
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="inline-flex h-11 items-center justify-center rounded-full bg-foreground px-5 text-background transition-colors hover:bg-sunset"
+              className="inline-flex h-11 items-center justify-center rounded-full bg-background px-5 text-foreground transition-colors hover:bg-sunset hover:text-background"
             >
               Démarrer votre aventure
             </Link>
