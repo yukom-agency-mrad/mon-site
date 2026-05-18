@@ -20,7 +20,7 @@ export function Pitch() {
     <section className="bg-[#FCFAF5]">
       <div className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-8 sm:py-16 md:py-20">
         <p className="max-w-4xl text-[42px] font-medium leading-[1.1] tracking-[-0.035em] text-foreground text-balance">
-          Votre entreprise a une histoire à raconter.
+          Votre entreprise a une histoire à raconter
           <em className="mt-2 block italic text-foreground sm:mt-3">
             Nous mettons notre{" "}
             <motion.span
@@ -42,7 +42,7 @@ export function Pitch() {
                 </motion.span>
               </AnimatePresence>
             </motion.span>{" "}
-            sur sa route.
+            sur sa route
           </em>
         </p>
       </div>
