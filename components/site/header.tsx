@@ -6,12 +6,6 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "./logo";
 import { Button } from "@/components/ui/button";
 
-const NAV_LINKS = [
-  { href: "/#services", label: "Services" },
-  { href: "/#a-propos", label: "À propos" },
-  { href: "/#avis", label: "Avis" },
-];
-
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -19,18 +13,6 @@ export function Header() {
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 sm:h-20 sm:px-8">
         <Logo />
-
-        <nav className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm text-background/85 transition-colors hover:text-background"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
 
         <div className="hidden md:block">
           <Button
@@ -56,20 +38,10 @@ export function Header() {
       {mobileOpen && (
         <div className="border-t border-border/60 bg-background/95 backdrop-blur-md md:hidden">
           <nav className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-6 py-4">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="rounded-md px-3 py-3 text-base text-foreground/80 transition-colors hover:bg-muted hover:text-foreground"
-              >
-                {link.label}
-              </Link>
-            ))}
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-foreground px-5 text-background transition-colors hover:bg-sunset"
+              className="inline-flex h-11 items-center justify-center rounded-full bg-foreground px-5 text-background transition-colors hover:bg-sunset"
             >
               Commencer l'aventure
             </Link>
