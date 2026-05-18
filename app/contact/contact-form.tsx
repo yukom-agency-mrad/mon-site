@@ -40,11 +40,11 @@ export function ContactForm() {
     <form action={formAction} className="space-y-6" noValidate>
       <input
         type="text"
-        name="company"
+        name="__bivouac"
         tabIndex={-1}
         autoComplete="off"
-        className="absolute -left-[9999px] size-0 opacity-0"
         aria-hidden
+        style={{ display: "none" }}
       />
 
       <div className="grid gap-5 sm:grid-cols-2">

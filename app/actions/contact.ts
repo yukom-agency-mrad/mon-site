@@ -24,7 +24,7 @@ export async function sendContact(
   _prev: ContactState,
   formData: FormData,
 ): Promise<ContactState> {
-  const honeypot = String(formData.get("company") ?? "");
+  const honeypot = String(formData.get("__bivouac") ?? "");
   if (honeypot) {
     return { status: "success", message: "Merci, message reçu !" };
   }
