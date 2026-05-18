@@ -40,6 +40,7 @@ const LOGOS: Logo[] = [
     name: "IFA Business School",
     src: "/clients/ifa.png",
     maxH: "max-h-8 sm:max-h-10",
+    filter: "opacity(0.9)",
   },
   { name: "Second Life", src: "/clients/second-life.png" },
   { name: "Ultrace", src: "/clients/ultrace.png", maxH: XL_H },
@@ -56,7 +57,7 @@ const LOGOS: Logo[] = [
     name: "Université de Lorraine",
     src: "/clients/universite-lorraine.png",
     maxH: BIG_H,
-    filter: "invert(1) opacity(0.85)",
+    filter: "brightness(0) invert(1) opacity(0.85)",
   },
 ];
 
@@ -124,7 +125,7 @@ export function ClientsMarquee() {
                   <Star
                     key={i}
                     aria-hidden
-                    className="size-3.5 fill-sunset text-sunset"
+                    className="size-3.5 fill-yellow-400 text-yellow-400"
                   />
                 ))}
               </div>

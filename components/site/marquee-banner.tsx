@@ -11,7 +11,7 @@ function Group({ ariaHidden = false }: { ariaHidden?: boolean }) {
     >
       {Array.from({ length: REPEAT_PER_GROUP }).map((_, i) => (
         <div key={i} className="flex items-center gap-6">
-          <span className="whitespace-nowrap text-[20px] font-medium italic tracking-[-0.01em] text-foreground">
+          <span className="whitespace-nowrap text-[20px] font-medium tracking-[-0.01em] text-foreground">
             {TEXT}
           </span>
           <Compass
