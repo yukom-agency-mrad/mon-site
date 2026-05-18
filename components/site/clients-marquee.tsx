@@ -54,6 +54,12 @@ const LOGOS: Logo[] = [
   },
   { name: "Kinepolis", src: "/clients/kinepolis.png" },
   { name: "Egrego", src: "/clients/egrego.svg" },
+  { name: "Smart Up Formation", src: "/clients/smartup.png" },
+  { name: "Conseil", src: "/clients/conseil.png" },
+  { name: "BPC-ESC by ifpass", src: "/clients/bpc-esc.png" },
+  { name: "Smiley", src: "/clients/smiley.png" },
+  { name: "Moselle Attractivité", src: "/clients/moselle-attractivite.png" },
+  { name: "Le Billot Lorrain", src: "/clients/billot-lorrain.png" },
   {
     name: "Université de Lorraine",
     src: "/clients/universite-lorraine.png",
