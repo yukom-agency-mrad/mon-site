@@ -26,9 +26,6 @@ export function About() {
                 />
               </div>
               <div className="mt-3 flex items-center justify-center gap-2.5 sm:mt-4">
-                <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-foreground/80 sm:text-xs">
-                  Maud Mrad · Fondatrice Yukom
-                </p>
                 <a
                   href="https://www.linkedin.com/in/maud-mrad/"
                   target="_blank"
@@ -38,6 +35,9 @@ export function About() {
                 >
                   <LinkedinIcon className="size-3.5" />
                 </a>
+                <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-foreground/80 sm:text-xs">
+                  Maud Mrad · Fondatrice Yukom
+                </p>
               </div>
             </div>
           </div>
