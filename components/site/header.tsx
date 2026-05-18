@@ -20,7 +20,7 @@ export function Header() {
             size="lg"
             className="rounded-full bg-background px-5 text-foreground transition-colors hover:bg-sunset hover:text-background [a]:hover:bg-sunset [a]:hover:text-background"
           >
-            <Link href="/contact">Parlons de votre projet</Link>
+            <Link href="/contact">Démarrer votre aventure</Link>
           </Button>
         </div>
 
@@ -43,7 +43,7 @@ export function Header() {
               onClick={() => setMobileOpen(false)}
               className="inline-flex h-11 items-center justify-center rounded-full bg-foreground px-5 text-background transition-colors hover:bg-sunset"
             >
-              Parlons de votre projet
+              Démarrer votre aventure
             </Link>
           </nav>
         </div>
